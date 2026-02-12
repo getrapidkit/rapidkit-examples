@@ -158,7 +158,37 @@ def dev(port: int = 8000, host: str = "0.0.0.0", allow_global_runtime: bool = Fa
             print("⚠️  You are running with the system/global Python/runtime which may differ from what this project expects.")
             print("💡 Consider running `rapidkit init` to create an isolated .venv for reproducible builds.")
 
-        rc = _run(sys.executable, "-m", "uvicorn", "src.main:app", "--reload", "--host", host, "--port", str(selected_port))
+        reload_args: list[str] = [
+            "--reload",
+            "--reload-dir",
+            "src",
+            "--reload-exclude",
+            ".venv/*",
+            "--reload-exclude",
+            "node_modules/*",
+            "--reload-exclude",
+            ".git/*",
+            "--reload-exclude",
+            "dist/*",
+            "--reload-exclude",
+            "build/*",
+            "--reload-exclude",
+            ".mypy_cache/*",
+            "--reload-exclude",
+            "__pycache__/*",
+        ]
+        rc = _run(
+            sys.executable,
+            "-m",
+            "uvicorn",
+            "src.main:app",
+            *reload_args,
+            "--host",
+            host,
+            "--port",
+            str(selected_port),
+            env={"WATCHFILES_FORCE_POLLING": "true"},
+        )
         if rc != 0:
             sys.exit(rc)
     elif ptype == "node":

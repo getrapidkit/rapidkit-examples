@@ -48,10 +48,56 @@ Before running the project, you can validate the whole workspace:
 npx rapidkit doctor --workspace
 ```
 
-Expected result for this example workspace:
+Sample output for this workspace:
 
-- `Health Score: 100%`
-- `All checks passed! Workspace is healthy.`
+```text
+🩺 RapidKit Health Check
+
+Workspace: my-ai-workspace
+Path: /path/to/my-ai-workspace
+
+📊 Health Score:
+    100% ████████████████████
+    ✅ 6 passed | ⚠️ 0 warnings | ❌ 0 errors
+
+
+System Tools:
+
+✅ Python: Python 3.10.19
+    Using python3
+✅ Poetry: Poetry 2.3.2
+    Available for dependency management
+✅ pipx: pipx 1.8.0
+    Available for global tool installation
+✅ RapidKit Core: RapidKit Core 0.3.0
+    • Global (pipx): ~/.local/bin/rapidkit -> 0.3.0
+    • Global (pyenv): ~/.pyenv/shims/rapidkit -> 0.3.0
+    • Workspace (.venv): /path/to/my-ai-workspace/.venv/bin/rapidkit -> 0.3.0
+
+📦 Projects (2):
+
+✅ Project: ai-agent
+    🐍 Framework: FastAPI
+    Path: /path/to/my-ai-workspace/ai-agent
+    ✅ Dependencies: Installed
+    ✅ Environment: .env configured
+    ✅ Modules: Healthy
+    📊 Stats: 5 modules
+    🕒 Last Modified: today
+    ✅ Tests • ✅ Docker • ✅ Ruff
+
+✅ Project: ai-agent-nest
+    🦅 Framework: NestJS
+    Path: /path/to/my-ai-workspace/ai-agent-nest
+    ✅ Dependencies: Installed
+    ✅ Environment: .env configured
+    ✅ Modules: Healthy
+    📊 Stats: 5 modules
+    🕒 Last Modified: today
+    ✅ Tests • ✅ Docker • ✅ ESLint
+
+✅ All checks passed! Workspace is healthy.
+```
 
 ## Command Reference
 
