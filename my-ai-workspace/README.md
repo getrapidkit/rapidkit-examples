@@ -1,13 +1,14 @@
 # my-ai-workspace
 
-RapidKit workspace for the published AI Agent tutorial.
+RapidKit workspace for AI agent examples (FastAPI + NestJS).
 
 - Medium: https://rapidkit.medium.com/build-your-first-ai-agent-with-rapidkit-in-10-minutes-f38a6a12088d
 - Dev.to: https://dev.to/rapidkit/build-your-first-ai-agent-with-rapidkit-in-10-minutes-3dj6
 - Source repository: https://github.com/getrapidkit/rapidkit-examples/tree/main/my-ai-workspace
-- Main runnable project: [ai-agent](ai-agent/README.md)
+- FastAPI project: [ai-agent](ai-agent/README.md)
+- NestJS project: [ai-agent-nest](ai-agent-nest/README.md)
 
-## Quick Start
+## Quick Start (FastAPI)
 
 ```bash
 cd ai-agent
@@ -20,6 +21,24 @@ Notes:
 
 - `rapidkit dev` now auto-switches to a free port if your requested/default port is busy.
 - API docs: http://127.0.0.1:8000/docs (or the fallback port printed in terminal).
+
+## Quick Start (NestJS parity example)
+
+```bash
+cd ai-agent-nest
+source .rapidkit/activate
+rapidkit init
+rapidkit dev -p 8013
+```
+
+Key endpoints:
+
+- `GET /ai/assistant/providers`
+- `POST /ai/assistant/completions`
+- `POST /ai/assistant/stream`
+- `DELETE /ai/assistant/cache`
+- `POST /support/ticket`
+- `GET /docs`
 
 ## Health Check
 
@@ -49,12 +68,15 @@ Use this to quickly see global commands (create, doctor, modules, etc.) and proj
 ```text
 my-ai-workspace/
 ├── README.md
-└── ai-agent/
-    ├── README.md
-    └── EXAMPLE_README.md
+├── ai-agent/
+│   ├── README.md
+│   └── EXAMPLE_README.md
+└── ai-agent-nest/
+    └── README.md
 ```
 
 Use:
 
 - `ai-agent/README.md` for day-to-day development commands
 - `ai-agent/EXAMPLE_README.md` for tutorial walkthrough and API usage examples
+- `ai-agent-nest/README.md` for NestJS parity implementation and endpoint checks

@@ -1,0 +1,27 @@
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+
+import { settingsConfiguration } from './config/configuration';
+import { validationSchema } from './config/validation';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { rapidkitModules } from './modules';
+import { ExamplesModule } from './examples/examples.module';
+import { SupportAgentService } from './agents/support-agent.service';
+// <<<inject:module-imports>>>
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      load: [settingsConfiguration],
+      validationSchema,
+      expandVariables: true,
+    }),
+    ExamplesModule,
+    ...rapidkitModules,
+  ],
+  controllers: [AppController],
+  providers: [AppService, SupportAgentService],
+})
+export class AppModule { }

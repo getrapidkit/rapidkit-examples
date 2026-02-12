@@ -1,0 +1,371 @@
+{
+  "snippets": {
+    "logging_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-12T11:10:27.941226+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-12T11:10:27.941226+00:00"
+    },
+    "logging_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-12T11:10:27.947672+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-12T11:10:27.947672+00:00"
+    },
+    "logging_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-12T11:10:27.953344+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-12T11:10:27.953344+00:00"
+    },
+    "logging_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-12T11:10:27.959628+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-12T11:10:27.959628+00:00"
+    },
+    "logging_settings_fields_nestjs::configuration.ts": {
+      "anchor": "// <<<inject:settings-fields>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": "src/modules/free/essentials/settings/configuration.ts",
+      "status": "applied",
+      "last_attempt_at": "2026-02-12T11:10:28.019845+00:00",
+      "template": "logging_fields_nestjs.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": "src/modules/free/essentials/settings/configuration.ts",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "async_queue": true,
+          "file_path": "logs/app.log",
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-12T11:10:28.019845+00:00"
+    }
+  }
+}

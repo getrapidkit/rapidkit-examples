@@ -1,0 +1,229 @@
+{
+  "files": {
+    ".dockerignore": {
+      "hash": "7820ac0b671af42830f4e1ffcd8b4a686e42efa89b83ec5a0edcb7ccc15eaef9",
+      "module": "deployment",
+      "previous_hash": "c4d6cea8e9cf2e2f3e32ca7f6fb186c34a5aa3e64a6b171840ab41638e75170d",
+      "version": "0.1.3"
+    },
+    ".github/workflows/ci.yml": {
+      "hash": "1c69fed8b3d25e993545144ec2d147cea68cc16abe7e5a69cd74b5a3ebd410c5",
+      "module": "deployment",
+      "previous_hash": "acbec29b9caa5a0ab9d006b63174d1adc96867e89f8ffb0fa63c985d2a54a252",
+      "version": "0.1.3"
+    },
+    "Dockerfile": {
+      "hash": "2f43fe52a7ba6c222d5101b11b9b0fa0f40893532a5811dc38a110e89d14e578",
+      "module": "deployment",
+      "previous_hash": "32b5c18d2f4358adde61f40167e4fa0ff27e4f59441de85af8d191b9cde155ad",
+      "version": "0.1.3"
+    },
+    "Makefile": {
+      "hash": "2dccacba8234ee426b7eae9944da38da40c0f5feb3aa4e1d1866f4ebfb983317",
+      "module": "deployment",
+      "previous_hash": "e5e905cbdcd12439d32d8557c686f219f13e5dc5ccf9512a5fdd4e87293c1383",
+      "version": "0.1.3"
+    },
+    "docker-compose.yml": {
+      "hash": "ae081b13d5ebbc518f95f8cd9417bb44aaa8b6e1dd28ea353586d929b941c119",
+      "module": "deployment",
+      "previous_hash": "d68c8ac4e0b3560a543fd7388c8063be7af4b7aedbab21dab003203a64bc0a67",
+      "version": "0.1.3"
+    },
+    "src/health/ai_assistant.health.ts": {
+      "hash": "c75d65000d73c60a3306b1067dbab0853e1f66ab73afc846cbf05597dd6b24db",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "src/health/logging.health.ts": {
+      "hash": "59273e7a12a759ad201c7876a3b033b7d99062a5b580f8ac1c4ff40b53119fc0",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/health/middleware.health.ts": {
+      "hash": "7b9f969b808d982df49861937b438f7628cab923acb392c20a8258bf17964cfb",
+      "module": "middleware",
+      "version": "0.1.13"
+    },
+    "src/health/settings.health.ts": {
+      "hash": "572b198fe62476af03226b5ae808deb75688e4154a881867304b91a4d510b29c",
+      "module": "settings",
+      "version": "0.1.32"
+    },
+    "src/modules/free/ai/ai_assistant/ai_assistant.controller.ts": {
+      "hash": "561d674f04f893df16480a90fdbe697c6d91b5634fbccb6f457def43c64ed6a4",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "src/modules/free/ai/ai_assistant/ai_assistant.module.ts": {
+      "hash": "fc24066f9bae5551f5a5ffce2404cac6a7c8a784c6d41b810da37504af2b65f4",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "src/modules/free/ai/ai_assistant/ai_assistant.service.ts": {
+      "hash": "35068a1da9b4ccef45ee091d00312d3e296d5ee906a4480b8b7c37d3f3178118",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "src/modules/free/ai/ai_assistant/ai_assistant.validation.ts": {
+      "hash": "a435097f8000469b4e9925468fbdb1ac458f4dce721a197cf332bf9606c4758b",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "src/modules/free/ai/ai_assistant/configuration.ts": {
+      "hash": "aa2f87fba7cefca0bdd32b82561999235bf7b46afe50ba3a2c62cd563182e778",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "src/modules/free/ai/ai_assistant/index.ts": {
+      "hash": "59f73a45b86bca92acab90af90e2d6e38c147c3e4dcb232cf9cd018f22ee8b62",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "src/modules/free/essentials/deployment/deployment.configuration.ts": {
+      "hash": "eebdfffb4758f9c89e146950086d473c4d2b5861a0b63bb9f70b7cabae9b8922",
+      "module": "deployment",
+      "version": "0.1.3"
+    },
+    "src/modules/free/essentials/deployment/deployment.controller.ts": {
+      "hash": "9bf2f7abe0d2400f18d84fe24a450e4f646c42f49fb163be14a8af05819aa365",
+      "module": "deployment",
+      "version": "0.1.3"
+    },
+    "src/modules/free/essentials/deployment/deployment.module.ts": {
+      "hash": "e7c18b147abe4190200f8365af5d2f930708e4ec3609d366c5eb4cf74862cedb",
+      "module": "deployment",
+      "version": "0.1.3"
+    },
+    "src/modules/free/essentials/deployment/deployment.service.ts": {
+      "hash": "17e135dca53d41064910d0fba4d0e7ba3f8a2b06da066eeb9c1866e5caca8402",
+      "module": "deployment",
+      "version": "0.1.3"
+    },
+    "src/modules/free/essentials/logging/configuration.ts": {
+      "hash": "69efcb5518bcdcbca7d20d0c6662cd4bf34badbf3567d9c3f30f3f712183968f",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/modules/free/essentials/logging/index.ts": {
+      "hash": "b6f4df69fe9f57111b25d5e7762cff17d83b180408373178749ec3b21a62d8ff",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/modules/free/essentials/logging/logging.controller.ts": {
+      "hash": "016b076c76b355aa17f89106f3118ced12ac184ab6af0668f80e52d82a4214ec",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/modules/free/essentials/logging/logging.interceptor.ts": {
+      "hash": "e8d9553c8c0e23b6518859207ccb6f4e62a3696c13dfcbcbbace93ac7540650c",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/modules/free/essentials/logging/logging.module.ts": {
+      "hash": "0de078e0f95cfb61ac32699d1278c230b99c625afbc2e940629bc7eee6cd409e",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/modules/free/essentials/logging/logging.service.ts": {
+      "hash": "70fa1c9c663e64112ff7bc58a7cf8e4bb28bce25c407e2cbce4b4a0707ee204e",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/modules/free/essentials/logging/validation.ts": {
+      "hash": "1ae4efea61c6ad6c10adefea4fe015e243256ca2f7c82cb1cbe1c671e3f2bd9d",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "src/modules/free/essentials/middleware/configuration.ts": {
+      "hash": "131f9ce93ebd83581576a5b443bdb9875817cb85a09b718aff5922faab5fc83d",
+      "module": "middleware",
+      "version": "0.1.13"
+    },
+    "src/modules/free/essentials/middleware/controller.ts": {
+      "hash": "e48b415080c1e1077411a2947f4a4d301084bb5941ac72d598bfadcbc30664a0",
+      "module": "middleware",
+      "version": "0.1.13"
+    },
+    "src/modules/free/essentials/middleware/module.ts": {
+      "hash": "694b51956338fc87e335333c7de3dba2bdecdaed2b15aec8802653386cb59aa2",
+      "module": "middleware",
+      "version": "0.1.13"
+    },
+    "src/modules/free/essentials/middleware/service.ts": {
+      "hash": "6cca347d9cf289fd06faeb1357b752dafe91bfd9f99e4718a01b5a291390207c",
+      "module": "middleware",
+      "version": "0.1.13"
+    },
+    "src/modules/free/essentials/settings/configuration.ts": {
+      "hash": "aa9268fc9cd6935e1fdb6f071f8752d26a2d40175cbe7fbd6db7220b26676425",
+      "module": "settings",
+      "version": "0.1.32"
+    },
+    "src/modules/free/essentials/settings/settings.controller.ts": {
+      "hash": "30ab90c7c83c4c99650395a3872b8fb812f03ff82da748333d6ab737d80daca0",
+      "module": "settings",
+      "version": "0.1.32"
+    },
+    "src/modules/free/essentials/settings/settings.metadata.ts": {
+      "hash": "9da511e47053425f1bd0e97142315934fe303a7b249914bd34a7a46b4cd64d67",
+      "module": "settings",
+      "version": "0.1.32"
+    },
+    "src/modules/free/essentials/settings/settings.module.ts": {
+      "hash": "4eef31da3b96c8636daf004cf1adbf1c0dd02a8afd61f0c30facb90cc4195dd2",
+      "module": "settings",
+      "version": "0.1.32"
+    },
+    "src/modules/free/essentials/settings/settings.service.ts": {
+      "hash": "903cce9e4504086762bb48ebdd02509058a4d0691b1d8c4e258dd376af846414",
+      "module": "settings",
+      "version": "0.1.32"
+    },
+    "test/ai-assistant/ai_assistant.spec.ts": {
+      "hash": "bf456c96ba21c51b76a6f7edc12b9e0093543e07dbb533294717732dbd5263ec",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "tests/modules/e2e/free/ai/ai_assistant/ai_assistant.e2e-spec.ts": {
+      "hash": "6a8f19195ee92fdfd5d2edda0c063e7d25996214458fa7343d8bdd1b9733fc5e",
+      "module": "ai_assistant",
+      "version": "0.1.7"
+    },
+    "tests/modules/e2e/free/essentials/deployment/deployment.e2e-spec.ts": {
+      "hash": "d85f055917eeb6b92178bb61fd93037b33ba6bd3d3d201a194dfd088d8191029",
+      "module": "deployment",
+      "version": "0.1.3"
+    },
+    "tests/modules/e2e/free/essentials/logging/logging.e2e-spec.ts": {
+      "hash": "3db4bcfc0910bf86b8109d19bbe9ccaab2bd2617405f367755862358ad088d1a",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "tests/modules/e2e/free/essentials/settings/settings.e2e-spec.ts": {
+      "hash": "385b8302649c0d79ec53b98db6668ebacee2b6c468e8ec9bb177eee8a663da1f",
+      "module": "settings",
+      "version": "0.1.32"
+    },
+    "tests/modules/integration/essentials/deployment/deployment.integration.spec.ts": {
+      "hash": "bf2129cf281e114f6b7b658d1e1e639e16cd0e70f824f33f49a14b6a934c2495",
+      "module": "deployment",
+      "version": "0.1.3"
+    },
+    "tests/modules/integration/essentials/logging/logging.integration.spec.ts": {
+      "hash": "dfc4ecbbc2796ce9540027a267685b90d572b0524f0f8848d39bd0a989032bae",
+      "module": "logging",
+      "version": "0.1.2"
+    },
+    "tests/modules/integration/essentials/middleware/middleware.integration.spec.ts": {
+      "hash": "711596a80db6aa211de1c8ff495c8d8a88a475d7f7c912aacfaa344f1ad1e5d2",
+      "module": "middleware",
+      "version": "0.1.13"
+    },
+    "tests/modules/integration/essentials/settings/settings.integration.spec.ts": {
+      "hash": "f2a5bc7b7709bd16019337bd1b3c55bda9bf16c8fbb980a430b95d6bb4b92b9d",
+      "module": "settings",
+      "version": "0.1.32"
+    }
+  }
+}
