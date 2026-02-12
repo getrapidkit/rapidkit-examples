@@ -12,6 +12,7 @@ Path: [my-ai-workspace](my-ai-workspace)
 
 Includes:
 - `ai-agent` (FastAPI): multi-provider AI assistant (echo/template/openai-ready)
+- `ai-agent-nest` (NestJS): parity implementation with `ai_assistant` + `/support/ticket`
 - Streaming + caching endpoints
 - Health endpoints
 - Support ticket endpoint (`/support/ticket`)
@@ -23,6 +24,8 @@ Includes:
 - Dev.to: https://dev.to/rapidkit/build-your-first-ai-agent-with-rapidkit-in-10-minutes-3dj6
 
 ## Quick Start
+
+### FastAPI
 
 ```bash
 git clone https://github.com/getrapidkit/rapidkit-examples.git
@@ -36,6 +39,18 @@ Open Swagger UI:
 - http://127.0.0.1:8000/docs
 
 If port `8000` is already busy, `rapidkit dev` automatically falls back to a free port.
+
+### NestJS parity
+
+```bash
+cd rapidkit-examples/my-ai-workspace/ai-agent-nest
+source .rapidkit/activate
+rapidkit init
+rapidkit dev -p 8013
+```
+
+Open Swagger UI:
+- http://127.0.0.1:8013/docs
 
 ## Workspace Health Check
 
@@ -52,9 +67,11 @@ rapidkit-examples/
 ├── README.md
 └── my-ai-workspace/
     ├── README.md
-    └── ai-agent/
-        ├── README.md
-        └── EXAMPLE_README.md
+    ├── ai-agent/
+    │   ├── README.md
+    │   └── EXAMPLE_README.md
+    └── ai-agent-nest/
+        └── README.md
 ```
 
 ## Notes
@@ -62,3 +79,4 @@ rapidkit-examples/
 - Use `my-ai-workspace/README.md` for workspace-level setup.
 - Use `my-ai-workspace/ai-agent/README.md` for run/test commands.
 - Use `my-ai-workspace/ai-agent/EXAMPLE_README.md` for tutorial walkthrough and API smoke checks.
+- Use `my-ai-workspace/ai-agent-nest/README.md` for NestJS parity commands and endpoint checks.
