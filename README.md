@@ -26,8 +26,8 @@ This repository contains production-style reference implementations that accompa
 **Modules:** `settings`, `auth_core`, `db_postgres`, `redis`, `cors`, `security_headers`, `logging`, `deployment`
 
 **Articles:**
-- Medium: [From Zero to Production API in 5 Minutes](https://rapidkit.medium.com/from-zero-to-production-api-in-5-minutes)
-- Dev.to: [From Zero to Production API in 5 Minutes](https://dev.to/rapidkit/from-zero-to-production-api-in-5-minutes)
+- Medium: [From Zero to Production API in 5 Minutes](https://medium.com/@rapidkit/from-zero-to-production-api-in-5-minutes-e2f058286a09)
+- Dev.to: [From Zero to Production API in 5 Minutes](https://dev.to/rapidkit/from-zero-to-production-api-in-5-minutes-2ehl)
 
 ---
 
