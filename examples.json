@@ -1,0 +1,108 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "1.0.0",
+    "lastUpdated": "2026-02-14T00:00:00Z",
+    "repository": "https://github.com/getrapidkit/rapidkit-examples",
+    "workspaces": [
+        {
+            "id": "my-ai-workspace",
+            "name": "my-ai-workspace",
+            "title": "AI Agent Workspace",
+            "description": "Multi-provider AI assistant with FastAPI and NestJS implementations featuring streaming, caching, health checks, and support ticket endpoints.",
+            "path": "my-ai-workspace",
+            "tags": [
+                "AI",
+                "Streaming",
+                "Multi-Provider",
+                "OpenAI",
+                "Production"
+            ],
+            "featured": true,
+            "difficulty": "intermediate",
+            "lastModified": "2026-02-14T00:00:00Z",
+            "tutorialLinks": [
+                {
+                    "title": "Build Your First AI Agent with RapidKit",
+                    "url": "https://rapidkit.medium.com/build-your-first-ai-agent-with-rapidkit-in-10-minutes-f38a6a12088d",
+                    "platform": "Medium"
+                },
+                {
+                    "title": "Build Your First AI Agent with RapidKit",
+                    "url": "https://dev.to/rapidkit/build-your-first-ai-agent-with-rapidkit-in-10-minutes-3dj6",
+                    "platform": "Dev.to"
+                }
+            ],
+            "projects": [
+                {
+                    "id": "ai-agent",
+                    "name": "ai-agent",
+                    "type": "fastapi",
+                    "displayName": "AI Agent (FastAPI)",
+                    "description": "Production-ready FastAPI AI assistant with multi-provider support (echo/template/OpenAI-ready)",
+                    "path": "my-ai-workspace/ai-agent",
+                    "features": [
+                        "Multi-provider AI completions",
+                        "Streaming responses",
+                        "Response caching",
+                        "Health checks",
+                        "OpenAI integration"
+                    ],
+                    "endpoints": [
+                        "GET /docs",
+                        "GET /ai/assistant/providers",
+                        "POST /ai/assistant/completions",
+                        "POST /ai/assistant/stream",
+                        "GET /ai/assistant/health",
+                        "POST /support/ticket"
+                    ],
+                    "defaultPort": 8000
+                },
+                {
+                    "id": "ai-agent-nest",
+                    "name": "ai-agent-nest",
+                    "type": "nestjs",
+                    "displayName": "AI Agent (NestJS)",
+                    "description": "NestJS parity implementation with ai_assistant module + support/ticket workflow endpoint",
+                    "path": "my-ai-workspace/ai-agent-nest",
+                    "features": [
+                        "ai_assistant module integration",
+                        "Support ticket workflow",
+                        "OpenAI provider registration",
+                        "Swagger documentation",
+                        "Health endpoints"
+                    ],
+                    "endpoints": [
+                        "GET /docs",
+                        "GET /health",
+                        "GET /ai/assistant/providers",
+                        "POST /ai/assistant/completions",
+                        "POST /ai/assistant/stream",
+                        "GET /ai/assistant/health",
+                        "DELETE /ai/assistant/cache",
+                        "POST /support/ticket"
+                    ],
+                    "defaultPort": 8013
+                }
+            ],
+            "requirements": {
+                "python": ">=3.10",
+                "node": ">=20",
+                "rapidkit": ">=0.9.0"
+            },
+            "quickStart": {
+                "fastapi": [
+                    "cd my-ai-workspace/ai-agent",
+                    "source .rapidkit/activate",
+                    "rapidkit init",
+                    "rapidkit dev"
+                ],
+                "nestjs": [
+                    "cd my-ai-workspace/ai-agent-nest",
+                    "source .rapidkit/activate",
+                    "rapidkit init",
+                    "rapidkit dev -p 8013"
+                ]
+            }
+        }
+    ]
+}
