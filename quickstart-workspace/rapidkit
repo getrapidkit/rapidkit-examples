@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+VENV_RAPIDKIT="$SCRIPT_DIR/.venv/bin/rapidkit"
+if [ -x "$VENV_RAPIDKIT" ]; then
+  exec "$VENV_RAPIDKIT" "$@"
+fi
+
+if command -v poetry >/dev/null 2>&1 && [ -f "$SCRIPT_DIR/pyproject.toml" ]; then
+  exec poetry run rapidkit "$@"
+fi
+
+echo "RapidKit launcher could not find a local Python CLI." 1>&2
+echo "- If you used venv: ensure .venv exists (or re-run the installer)." 1>&2
+echo "- If you used Poetry: run 'poetry install' and retry, or activate the env." 1>&2
+echo "Tip: you can also run: ./.venv/bin/rapidkit --help" 1>&2
+exit 1

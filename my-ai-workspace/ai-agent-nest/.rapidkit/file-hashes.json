@@ -35,6 +35,11 @@
       "module": "ai_assistant",
       "version": "0.1.7"
     },
+    "src/health/api-keys.health.ts": {
+      "hash": "140b68057bc35bab30bc68a9762b500a963642a767753d933779d0ecac0d0f31",
+      "module": "api_keys",
+      "version": "0.1.0"
+    },
     "src/health/logging.health.ts": {
       "hash": "59273e7a12a759ad201c7876a3b033b7d99062a5b580f8ac1c4ff40b53119fc0",
       "module": "logging",
@@ -79,6 +84,26 @@
       "hash": "59f73a45b86bca92acab90af90e2d6e38c147c3e4dcb232cf9cd018f22ee8b62",
       "module": "ai_assistant",
       "version": "0.1.7"
+    },
+    "src/modules/free/auth/api_keys/api-keys.configuration.ts": {
+      "hash": "a3ebd5867f50bb412077713351b42a9f791b61aee8354e121c19b78ae719f104",
+      "module": "api_keys",
+      "version": "0.1.0"
+    },
+    "src/modules/free/auth/api_keys/api-keys.controller.ts": {
+      "hash": "3fdf745346564cdd945c9a8eb895091e8dad1a1428bdf992fd0e8092862e83b9",
+      "module": "api_keys",
+      "version": "0.1.0"
+    },
+    "src/modules/free/auth/api_keys/api-keys.module.ts": {
+      "hash": "ecf9d2b458c2c1b6d4c0c871149a0e5499de814748fbafab45ca595856fdf690",
+      "module": "api_keys",
+      "version": "0.1.0"
+    },
+    "src/modules/free/auth/api_keys/api-keys.service.ts": {
+      "hash": "9f20ce86078ab7cfad45b7804082a687e7adf0f0f373ec59ecb7a73f9bc1874a",
+      "module": "api_keys",
+      "version": "0.1.0"
     },
     "src/modules/free/essentials/deployment/deployment.configuration.ts": {
       "hash": "eebdfffb4758f9c89e146950086d473c4d2b5861a0b63bb9f70b7cabae9b8922",
@@ -185,10 +210,20 @@
       "module": "ai_assistant",
       "version": "0.1.7"
     },
+    "test/api-keys/api-keys.spec.ts": {
+      "hash": "da45f0b073cfd961f1b14a978020526bb99624a6570ff0473fdc573f4b69c3d9",
+      "module": "api_keys",
+      "version": "0.1.0"
+    },
     "tests/modules/e2e/free/ai/ai_assistant/ai_assistant.e2e-spec.ts": {
       "hash": "6a8f19195ee92fdfd5d2edda0c063e7d25996214458fa7343d8bdd1b9733fc5e",
       "module": "ai_assistant",
       "version": "0.1.7"
+    },
+    "tests/modules/e2e/free/auth/api_keys/api_keys.e2e-spec.ts": {
+      "hash": "027f865af7621daad6deb37b5bff6daa65fbc78de10506dfd1d2e1560fb32c02",
+      "module": "api_keys",
+      "version": "0.1.0"
     },
     "tests/modules/e2e/free/essentials/deployment/deployment.e2e-spec.ts": {
       "hash": "d85f055917eeb6b92178bb61fd93037b33ba6bd3d3d201a194dfd088d8191029",

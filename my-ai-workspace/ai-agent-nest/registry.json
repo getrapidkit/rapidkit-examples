@@ -24,6 +24,11 @@
       "slug": "free/ai/ai_assistant",
       "version": "0.1.7",
       "display_name": "Ai Assistant"
+    },
+    {
+      "slug": "free/auth/api_keys",
+      "version": "0.1.0",
+      "display_name": "API Keys"
     }
   ]
 }

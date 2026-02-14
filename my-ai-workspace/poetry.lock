@@ -1297,14 +1297,14 @@ files = [
 
 [[package]]
 name = "rapidkit-core"
-version = "0.3.0"
-description = "Public staging playground where we polish the next wave of RapidKit magic together"
+version = "0.3.1"
+description = "Community-built rapid automation toolkit for makers who ship with heart"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "rapidkit_core-0.3.0-py3-none-any.whl", hash = "sha256:a6d04d7baca18aedf20086c4a84b647f42fa1d6271988e2f06442d1410a4581c"},
-    {file = "rapidkit_core-0.3.0.tar.gz", hash = "sha256:08e6ef6fdc255002811d3a06bd1b5bc2ea75bc3c8ae4e1cb0b33d1f710b97abf"},
+    {file = "rapidkit_core-0.3.1-py3-none-any.whl", hash = "sha256:168b251c44fa6961d4946822a14b1cc5fa2f0d3c336f115493de7939c04cf89a"},
+    {file = "rapidkit_core-0.3.1.tar.gz", hash = "sha256:24880045c9ff443e745daa66932b6c8212099e215a9d47fbb3d9eb669438da01"},
 ]
 
 [package.dependencies]

@@ -103,6 +103,82 @@
                     "rapidkit dev -p 8013"
                 ]
             }
+        },
+        {
+            "id": "quickstart-workspace",
+            "name": "quickstart-workspace",
+            "title": "Quickstart Workspace",
+            "description": "Production-ready FastAPI demonstrating 5-minute setup with auth, database, caching, and monitoring.",
+            "path": "quickstart-workspace",
+            "tags": [
+                "Quickstart",
+                "Production-Ready",
+                "Authentication",
+                "PostgreSQL",
+                "Redis",
+                "Monitoring"
+            ],
+            "featured": true,
+            "difficulty": "beginner",
+            "lastModified": "2026-02-14T00:00:00Z",
+            "tutorialLinks": [
+                {
+                    "title": "From Zero to Production API in 5 Minutes",
+                    "url": "https://rapidkit.medium.com/from-zero-to-production-api-in-5-minutes",
+                    "platform": "Medium"
+                },
+                {
+                    "title": "From Zero to Production API in 5 Minutes",
+                    "url": "https://dev.to/rapidkit/from-zero-to-production-api-in-5-minutes",
+                    "platform": "Dev.to"
+                }
+            ],
+            "projects": [
+                {
+                    "id": "product-api",
+                    "name": "product-api",
+                    "type": "fastapi",
+                    "displayName": "Product API",
+                    "description": "Complete production-ready API with JWT auth, PostgreSQL, Redis, CORS, security headers, logging, and health checks",
+                    "path": "quickstart-workspace/product-api",
+                    "features": [
+                        "JWT Authentication (register, login, refresh)",
+                        "PostgreSQL with SQLAlchemy (async & sync)",
+                        "Redis caching with connection pooling",
+                        "CORS & Security Headers",
+                        "Structured JSON logging",
+                        "Health checks & Prometheus metrics",
+                        "Docker & docker-compose",
+                        "CI/CD templates"
+                    ],
+                    "endpoints": [
+                        "GET /docs",
+                        "GET /health",
+                        "GET /api/health/module/auth-core",
+                        "GET /api/health/module/postgres",
+                        "GET /api/health/module/redis",
+                        "GET /metrics",
+                        "POST /auth/register",
+                        "POST /auth/login",
+                        "GET /auth/me"
+                    ],
+                    "defaultPort": 8000
+                }
+            ],
+            "requirements": {
+                "python": ">=3.10",
+                "rapidkit": ">=0.9.0",
+                "docker": "recommended"
+            },
+            "quickStart": {
+                "fastapi": [
+                    "cd quickstart-workspace/product-api",
+                    "docker-compose up -d postgres redis",
+                    "source .rapidkit/activate",
+                    "rapidkit init",
+                    "rapidkit dev"
+                ]
+            }
         }
     ]
 }
