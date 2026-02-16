@@ -1,0 +1,534 @@
+{
+  "files": {
+    ".dockerignore": {
+      "hash": "fa71a44c8eaf60a8d05c2e703577a37bdf39dce5a768756fb2a5b7c1eb5a7808",
+      "module": "deployment",
+      "previous_hash": "8f2f5d507751a74c0d5cc58c151d74a6c29e49c811cd2aa1e38fafb599646de5",
+      "version": "0.1.10"
+    },
+    ".github/workflows/ci.yml": {
+      "hash": "1e2ae7b6157b901fa0bdb31adea556fbc1b6f4741a6f55b79425553a19c21166",
+      "module": "deployment",
+      "previous_hash": "dbfbb8c0f75ed86afa1f7d37c5e3acb094c0d84c764c1ee9095690366e1e710d",
+      "version": "0.1.10"
+    },
+    "Dockerfile": {
+      "hash": "e3c8a12f00458f7aa6786b0acdd35a2a09e464399cdeff123e71673052aa7e05",
+      "module": "deployment",
+      "previous_hash": "ee7c7e32d57c2fd7c852379ecc41d59ef65d1c47c637ceb620f93abef211dbc5",
+      "version": "0.1.10"
+    },
+    "Makefile": {
+      "hash": "bd13bece13a657eb88afc84fd51ae10ef457235aba88f40666cf9e629b4989ed",
+      "module": "deployment",
+      "previous_hash": "d249485cbfae3145a5e2ad7b3444e66866ef63adb8f8634a4d6625cda9a2a868",
+      "version": "0.1.10"
+    },
+    "config/cache/redis.yaml": {
+      "hash": "4a54f89bc563376d1bca54824092c61ceed0a98b0c7c07d457badd51bb3acbe2",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "config/database/postgres.yaml": {
+      "hash": "fbf0a88e1a6071eea015f2d3c19c2a3979be4741c9168c458940eca601d13cde",
+      "module": "db_postgres",
+      "version": "0.1.25"
+    },
+    "config/observability/observability_core.yaml": {
+      "hash": "a87bd405f6fd422519a2f7b7b8371addad359dd0f59a68587a9ea6605dc7ce2e",
+      "module": "observability_core",
+      "version": "0.1.11"
+    },
+    "config/security/security_headers.yaml": {
+      "hash": "8af3f1ca16948b42ec7abbfa933536e7d4ca23fdf903d0918440ac30d828f1ad",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "config/users/users_profiles.yaml": {
+      "hash": "0b8ca752ea8b67cf174e881e43a95f3695af8eac77a9008ea46722311aee62d5",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "docker-compose.yml": {
+      "hash": "ae838db4f252160e284c61709b3ba250a94b78d8388e932039ebed56a58fe77e",
+      "module": "deployment",
+      "previous_hash": "356191fc5ec25ba99423043dd2d0ef78d680747bdea27fcfb291101e48fa5fea",
+      "version": "0.1.10"
+    },
+    "src/health/__init__.py": {
+      "hash": "ba984080d6ab3fab87ac0e145d50bf2f0bf4cae23614a49c4b5f36e02d160916",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "src/health/auth_core.py": {
+      "hash": "c1f2abc55644161827ff0bf3aaab1c8a1730326cf0944b2a8c7c121b1dc5883d",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/health/deployment.py": {
+      "hash": "ab426c1f0976a9cd585ce5f793b170ce76195887664c398b3387c26b28ed5cb4",
+      "module": "deployment",
+      "version": "0.1.10"
+    },
+    "src/health/logging.py": {
+      "hash": "133d7e517375892a04d2f890efa661382f5ba45a7d6b9474ff0bfe2366753e64",
+      "module": "logging",
+      "version": "0.1.9"
+    },
+    "src/health/middleware.py": {
+      "hash": "0cc7cfe2a4597b22c33b98e27b015adba1772858530eb9eaa4b976627965f20f",
+      "module": "middleware",
+      "version": "0.1.20"
+    },
+    "src/health/observability_core.py": {
+      "hash": "f884ab66ccd97244df794a641076f3249968caec3a7a250f1ca5e852ceec9125",
+      "module": "observability_core",
+      "version": "0.1.11"
+    },
+    "src/health/postgres.py": {
+      "hash": "36c5d2ee97f6fdaec7731c3950c96f1d5336254076bb9689f6742c97a4ac1032",
+      "module": "db_postgres",
+      "version": "0.1.25"
+    },
+    "src/health/redis.py": {
+      "hash": "302b13d2f6d0f6c7951edc62975256842b5b2ac74b6641cab6d9208fbb556867",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "src/health/registry.py": {
+      "hash": "5913b8b9f802b0dd8d26b639d2b8ee02b193dc8aa6d95d53cfe78e554bfde58c",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "src/health/security_headers.py": {
+      "hash": "4fb8c2052f56ee9f78dfd008b7cebb3402fff5bfba3982799a41e67a7796aa5d",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "src/health/settings.py": {
+      "hash": "9a3637c00c50a3cdfca6bfb9dd0e77529ae01495d443c8b36a72131ad406d2b6",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "src/health/users_core.py": {
+      "hash": "ffec9aab51e72f2bf889eed7c73695547f23a18807567cabc31f272c1f263ff3",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/health/users_profiles.py": {
+      "hash": "3482f3714c9d1b531b0465f29f1be0074817907acc29bc1f436f538275d63cc0",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/auth/core/auth/core.py": {
+      "hash": "bd0b47ef8021967d6d953547defda170feebd9b9772520c7d1ddd71ac249ec0a",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/auth/core/auth/core_types.py": {
+      "hash": "83c8f7bdbe6e0e4986581dd08a8d0d6877edc77035f6c86bec6512512468c0ba",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/auth/core/auth/dependencies.py": {
+      "hash": "fd429648f76963b78d4245f6485d4c2dd86398152334a67b94378f9289397f5b",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/auth/core/auth/jwt_advanced.py": {
+      "hash": "3f1c00bc30bc9b302fdef5b8e8e5d645da145330126b3fd2a73416d809e6b5e8",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/auth/core/auth/rbac.py": {
+      "hash": "bc81608724d8b29d8ed3c044fdc4ec038037df648bcba3765755c3f0d50fd537",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/auth/core/config/auth_core.yaml": {
+      "hash": "3363ec430c5a81023fc0bf51c8d23dec64020bd79430294e0ebd785d0bff2106",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/auth/core/routers/auth_core.py": {
+      "hash": "6ef27398f7dd0d6b1598e8e674f89055f6565a02933c9d3426e21210aa4db91b",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/cache/redis/__init__.py": {
+      "hash": "575f75f3f1d9c268eb27908dacfee223aa13de89fcdb93b427a3d9d2329efe69",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "src/modules/free/cache/redis/client.py": {
+      "hash": "5d193028c416282880ab9892672e17948e0de3866b2b33c50aa320840cf6ddcd",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "src/modules/free/cache/redis/redis.py": {
+      "hash": "cad9e7c3eab6f6db50c83e4864c85379de8865aa2119f19ae1194cf71fe9e99c",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "src/modules/free/cache/redis/routers/redis.py": {
+      "hash": "a189fa92f0c675770738b7c1216d661653966b6b0a57cd59c794e5e386aeb121",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "src/modules/free/database/db_postgres/postgres.py": {
+      "hash": "01629e72ee87c27aae20867553ffa6bb220e78432ae637167767aeaae041698c",
+      "module": "db_postgres",
+      "version": "0.1.25"
+    },
+    "src/modules/free/essentials/deployment/config/deployment.yaml": {
+      "hash": "67d57ba0e16c4e212e15975d39709219bfff24a74b01f486f68d6ce36233017a",
+      "module": "deployment",
+      "version": "0.1.10"
+    },
+    "src/modules/free/essentials/deployment/deployment.py": {
+      "hash": "2983a3c6c9ba69d191b1e8d1526df861376e5be6ed4f7c004429d440f21d15d5",
+      "module": "deployment",
+      "version": "0.1.10"
+    },
+    "src/modules/free/essentials/deployment/routers/deployment.py": {
+      "hash": "34de40b5e52b9f805545da8e6df26db7f83a0f45715c5bfdeb89f5f0fc69f6b9",
+      "module": "deployment",
+      "version": "0.1.10"
+    },
+    "src/modules/free/essentials/logging/config/logging.yaml": {
+      "hash": "6a5c77f026d72c316685e2e2e95389c0d437bbdfeecfe0c5908a1af622d8943a",
+      "module": "logging",
+      "version": "0.1.9"
+    },
+    "src/modules/free/essentials/logging/logging.py": {
+      "hash": "620e8436883effc20adcc082a3fc5284f138dc54bd496222bf0496b90531af65",
+      "module": "logging",
+      "version": "0.1.9"
+    },
+    "src/modules/free/essentials/logging/routers/logging.py": {
+      "hash": "1915b7339acefd7791cf9f18bdae4d6e4d8160cb2a7f9edc9d22b6111e28bc4a",
+      "module": "logging",
+      "version": "0.1.9"
+    },
+    "src/modules/free/essentials/middleware/config/middleware.yaml": {
+      "hash": "b3fc0273cb740623edff336f9d5c466f4684c0094e5e29c4b67e69dd3c8533a7",
+      "module": "middleware",
+      "version": "0.1.20"
+    },
+    "src/modules/free/essentials/middleware/middleware.py": {
+      "hash": "707700ccc76704746e7f3cd7c60a74c991e363e0b809b2da33b60b878b2b01ab",
+      "module": "middleware",
+      "version": "0.1.20"
+    },
+    "src/modules/free/essentials/middleware/routers/middleware.py": {
+      "hash": "b4ba3f80e867bde7fdfecba925d52d75103fc5923025af051fc35efac33a8123",
+      "module": "middleware",
+      "version": "0.1.20"
+    },
+    "src/modules/free/essentials/settings/__init__.py": {
+      "hash": "014b10197a1f512bd94c8c1a45d30f3f520c10b909d99346c1098d30a3d0b812",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "src/modules/free/essentials/settings/custom_sources.py": {
+      "hash": "7d9098bc597d945939587046cd9b0775db5114fbbbf0151cb93bf56d2aed1dca",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "src/modules/free/essentials/settings/hot_reload.py": {
+      "hash": "4eb89b658da3c52365f4b03ed64bc3f9d10b65e140d591b0a15f0be2dde881e0",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "src/modules/free/essentials/settings/routers/settings.py": {
+      "hash": "892d7829e6bb78e2b4c00e8509d131c9ee0d09ca746b6c4603e1b1c3ff21fec3",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "src/modules/free/essentials/settings/settings.py": {
+      "hash": "ee73c071772420627b389df400b58a32ad07cb074c17f748637d6061c24e44bc",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "src/modules/free/essentials/settings/settings_types.py": {
+      "hash": "d1892f17413138e129d5e2dee865814014164d42bf20b11262f41f0281e2e332",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "src/modules/free/observability/core/observability_core.py": {
+      "hash": "2c2953ca0b2efd5559c76bd60f5fb5e67bfa1dfa7305fe181f8ca5840991af99",
+      "module": "observability_core",
+      "version": "0.1.11"
+    },
+    "src/modules/free/observability/core/observability_core_types.py": {
+      "hash": "c2f2d697ccf17928e5613b734190e21713649f67e3c2d97b601b94bc82812f66",
+      "module": "observability_core",
+      "version": "0.1.11"
+    },
+    "src/modules/free/observability/core/routers/observability_core.py": {
+      "hash": "0048767c632694d99823e4d4b7e2b29b2b9376a0e3d831d18cbcf4edec7e1fdc",
+      "module": "observability_core",
+      "version": "0.1.11"
+    },
+    "src/modules/free/security/security_headers/routers/security_headers.py": {
+      "hash": "7cc8ab5d6bdec57dfe031e65100c7383d2ff30ac473e862b62129190fdeb5e18",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "src/modules/free/security/security_headers/security_headers.py": {
+      "hash": "43ff9d18c73f78decac3350fd89a3f2c77f3cd03bdceedb6548df8453e62fa60",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "src/modules/free/users/users_core/config/users_core.yaml": {
+      "hash": "8422a779141551dc24ef44517b9b322b3e0a0835faa3ed55b951ceacf30d3533",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/__init__.py": {
+      "hash": "1c799f38cd0b9eb0c8e24898fd0ad1cb299afe3bf156fabc972fdc154c96cfd8",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/dependencies.py": {
+      "hash": "9cdcf00daa02a84f899cdc021ccdb352648dccbb5eb8353bcb7b904f706ece4c",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/dto.py": {
+      "hash": "8d63908ebcdd1dc91b218c581e244d5e7f5e28298d1965ba0c5cb7fdebdc50a6",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/errors.py": {
+      "hash": "e4c3165b7362f7206673bb5f5957af6ad37cc563294518a926773b2e5df79a02",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/in_memory_repository.py": {
+      "hash": "f59f938e559506284e2a6f7787f84296f27b5dd3689394dcd2a709ae385bb5b6",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/metadata_routes.py": {
+      "hash": "26460b7d24abb14100fe5bb855443ae5bdba3a33b3879cbbb1c762a7c2438ce8",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/models.py": {
+      "hash": "6c592725925dbf422fff0b2da5fd155552493d2c0e8734d7fc186c2dc827e6ad",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/repository.py": {
+      "hash": "b3957d0da93367b0de232dcf9714fdfa26bd450d93c9a49d4e238dd8f0608f9c",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/router.py": {
+      "hash": "9ffa2f036ae2cb463c735434710d6f7813e5bc1fe903e33bfe30625b012fef47",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/service.py": {
+      "hash": "a4d2fa96a9c1e561ce6ba9c9939faeefc1c1b20a25bd31f7e4a33e44d490b63a",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/core/users/settings.py": {
+      "hash": "9941e4f87f87514a671b8834a3843255b6a5712ecb2c7073fe3c1b14dc399501",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/users_core.py": {
+      "hash": "9923cad5c0ee078ad52f6b783c26997a733b2b63b3e176d1172f346e222fa4f2",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_core/users_core_types.py": {
+      "hash": "b944bc3bc88a88ef4bb78ec9a2ce35dc5b1ac5779297bb0f5195843342e281cf",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/__init__.py": {
+      "hash": "02e43608dc32f47af89d27b48fd4e6d5ae1c60c13e66f2289625d449c403621f",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/dependencies.py": {
+      "hash": "01379120dfb7a9583686339fd76ad33382c3d5a52b5708f6f66e226953b66302",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/dto.py": {
+      "hash": "e496db715c86fc1501c3bf9b06a0a3c86b1f16caec233ac07b12cc553612cd84",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/errors.py": {
+      "hash": "51c299b484b6d44396c3fbef1e51ac8e1b4cf689f241829272195081ae5e1eb0",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/in_memory_repository.py": {
+      "hash": "14158b23cef20b9e77c2103b72d495f4017e50057798bf0ed83a10ac6819a1a5",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/metadata_routes.py": {
+      "hash": "e37d155154b6c1aa9a9686b23c188479d77955d09b68e00b76f172d7c9122fd5",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/models.py": {
+      "hash": "791a9e21680dedd24a818f92aaee17ba87a6281e6654164653d8679cd8767477",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/repository.py": {
+      "hash": "35c2eee2d208f60d2da14bee6491b438eab0ddff7afe3d158e9b1730eb49e352",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/router.py": {
+      "hash": "4a996e66c59621f4841c31da7fe68dcf19ba8975f645adad350ebce86567d144",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/runtime.py": {
+      "hash": "66d7e27e7f301f0df5a714541c5f014f191ba993dcd8f985404ea9982bc5ad90",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/service.py": {
+      "hash": "5cac4f66d07520f536217450573a4f3fb97df9337ebe873d18910554a5cbd664",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/core/users/profiles/settings.py": {
+      "hash": "045cce0e8e91a85db3788bbbacc2e93e0d15f2392856faa330c6204314f37648",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/users_profiles.py": {
+      "hash": "fb81376cfc2091de3a7c12ee705aba2be91722fe3703e9236dbc07b63910e37a",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "src/modules/free/users/users_profiles/users_profiles_types.py": {
+      "hash": "35fe3c804eb28151452fcaeeef5d72b6864de6fa6443e3b0cf2c5a3ad7ae2359",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "tests/modules/e2e/free/auth/core/test_core_e2e.py": {
+      "hash": "ff92b6a76a47a9418beb59f18174b5da145350bdd34404afce82230e7cd4f841",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "tests/modules/e2e/free/cache/redis/test_redis_e2e.py": {
+      "hash": "7d1f607edb1fe079187b6fd3b86ef51369964d9c4fb8c61a16c22ead3c3ff42b",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "tests/modules/e2e/free/essentials/deployment/test_deployment_e2e.py": {
+      "hash": "84de2e0228b04447a2171ffddb20e39d8d5febc1f8d2d2be08ce0bb5bd6c6d80",
+      "module": "deployment",
+      "version": "0.1.10"
+    },
+    "tests/modules/e2e/free/essentials/logging/test_logging_e2e.py": {
+      "hash": "d8768237f800034e20199eeef4575c105c2fbdc24c15cba71f66fe526ddfe47a",
+      "module": "logging",
+      "version": "0.1.9"
+    },
+    "tests/modules/e2e/free/essentials/middleware/test_middleware_e2e.py": {
+      "hash": "a891860021f62be65d6e213939695b9403944e7656c68cd9c20a5869236c808d",
+      "module": "middleware",
+      "version": "0.1.20"
+    },
+    "tests/modules/e2e/free/essentials/settings/test_settings_e2e.py": {
+      "hash": "55eadb4dfbaf61c7fb07ecce3dbb5cf6a5c9c02ac93bb3d58f7a4d2bde73dadc",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "tests/modules/e2e/free/observability/core/test_core_e2e.py": {
+      "hash": "b76eff5100618d09aec780856872f7538235990f432cd18030efed56c473cc30",
+      "module": "observability_core",
+      "version": "0.1.11"
+    },
+    "tests/modules/e2e/free/security/security_headers/test_security_headers_e2e.py": {
+      "hash": "d98683d9c262dc676dcb826b4872463e75fb56f1ab92d82a43b17719d02949fe",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "tests/modules/e2e/free/users/users_core/test_users_core_e2e.py": {
+      "hash": "ddd883539d9f822959de3c60588a513425f091ae0930cfc0755e563d9532eabb",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "tests/modules/e2e/free/users/users_profiles/test_users_profiles_e2e.py": {
+      "hash": "6bd93c67e5b23a3c1308895855f0175ea71ab47166161c6b6376663f9d0f11f2",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    },
+    "tests/modules/free/auth/core/test_auth_core_integration.py": {
+      "hash": "5d69f40250e7d538291bfe734da24b1ca09d074184a44624ef31745bb0b8070b",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "tests/modules/free/auth/core/test_core_integration.py": {
+      "hash": "1bd24d4788271be90742d54c693662d61b3bed89e440c8225f9b6227f3823d99",
+      "module": "auth_core",
+      "version": "0.1.7"
+    },
+    "tests/modules/free/cache/redis/test_redis_integration.py": {
+      "hash": "ff8a54cb8577b0d5642df3885c4d8937fb8a0c20531e4684c5da1048eb5c3a3e",
+      "module": "redis",
+      "version": "0.1.15"
+    },
+    "tests/modules/free/essentials/deployment/test_deployment_integration.py": {
+      "hash": "85052ae353b1f6884b7d6182fe1eec3c5752d73eb1c8de2144300761b3b160c6",
+      "module": "deployment",
+      "version": "0.1.10"
+    },
+    "tests/modules/free/essentials/logging/test_logging_integration.py": {
+      "hash": "fdf38a65a7490cab65a3f4da08f53e03ea0efcc700a16e70b2ae0da7e95ad974",
+      "module": "logging",
+      "version": "0.1.9"
+    },
+    "tests/modules/free/essentials/middleware/test_middleware_integration.py": {
+      "hash": "313e3c001b0954afeaa0bceeb07760f21f6e9dd6295fd916453ca6829a31c1fc",
+      "module": "middleware",
+      "version": "0.1.20"
+    },
+    "tests/modules/free/essentials/settings/test_settings_integration.py": {
+      "hash": "2184edaf11769a56ab54fc2102e8637877d760e039e62ef024914eacf3c74fc7",
+      "module": "settings",
+      "version": "0.1.41"
+    },
+    "tests/modules/free/users/users_core/test_users_core_integration.py": {
+      "hash": "4d98b7b06de7db8c88e95a51ad727fa5d21066557c1d784bb554f3f33e0e1a9a",
+      "module": "users_core",
+      "version": "0.1.7"
+    },
+    "tests/modules/integration/database/test_postgres_integration.py": {
+      "hash": "393dc98ede9e3bc4c07e540640529402cdff3bc0b33c901730cc1af0efbee3d9",
+      "module": "db_postgres",
+      "version": "0.1.25"
+    },
+    "tests/modules/integration/observability/test_observability_core_integration.py": {
+      "hash": "ab17b8ce55dc36fa9ff4e28f37ccad0bd0f2c67a735ce1e90e4c2d795b6c74b7",
+      "module": "observability_core",
+      "version": "0.1.11"
+    },
+    "tests/modules/integration/security/test_security_headers_integration.py": {
+      "hash": "f86af9f8ee59d8e0ce5c1f8dbd580c87d095aee4623df8e910af946d519c9a2e",
+      "module": "security_headers",
+      "version": "0.1.1"
+    },
+    "tests/modules/integration/users/test_users_profiles_integration.py": {
+      "hash": "87f28248516129f6d9b0cd97bcdff1c99f657b7ab727f510112a3582a4a7195e",
+      "module": "users_profiles",
+      "version": "0.1.7"
+    }
+  }
+}

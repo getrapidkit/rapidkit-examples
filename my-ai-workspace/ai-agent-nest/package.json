@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "NestJS application generated with RapidKit",
   "license": "MIT",
-  "author": "rapidx",
+  "author": "rapidkit team",
   "engines": {
     "node": ">=20.19.6"
   },

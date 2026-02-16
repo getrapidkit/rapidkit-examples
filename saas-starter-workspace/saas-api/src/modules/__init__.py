@@ -1,0 +1,44 @@
+"""Module bootstrap namespace."""
+
+from src.modules.free.essentials.settings import (
+    BaseSettings,
+    CustomConfigSource,
+    Field,
+    Settings,
+    configure_fastapi_app,
+    get_settings,
+    settings,
+    settings_dependency,
+)
+import src.modules.free.essentials.logging
+import src.modules.free.essentials.deployment
+import src.modules.free.essentials.middleware
+import src.modules.free.auth.core
+import src.modules.free.auth.oauth
+import src.modules.free.auth.session
+import src.modules.free.database.db_postgres
+from src.modules.free.cache.redis import (
+    AsyncRedis,
+    DEFAULTS,
+    RedisClient,
+    RedisSyncClient,
+    SyncRedis,
+    build_redis_url,
+    check_redis_connection,
+    describe_cache,
+    get_redis,
+    get_redis_metadata,
+    get_redis_sync,
+    list_features,
+    redis_dependency,
+    refresh_vendor_module,
+    register_redis,
+)
+import src.modules.free.users.users_core
+import src.modules.free.users.users_profiles
+import src.modules.free.billing.stripe_payment
+import src.modules.free.billing.cart
+import src.modules.free.billing.inventory
+import src.modules.free.security.cors
+import src.modules.free.security.security_headers
+# <<<inject:module-init>>>

@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "version": "1.0.0",
-    "lastUpdated": "2026-02-14T00:00:00Z",
+    "lastUpdated": "2026-02-16T00:00:00Z",
     "repository": "https://github.com/getrapidkit/rapidkit-examples",
     "workspaces": [
         {
@@ -177,6 +177,155 @@
                     "source .rapidkit/activate",
                     "rapidkit init",
                     "rapidkit dev"
+                ]
+            }
+        },
+        {
+            "id": "saas-starter-workspace",
+            "name": "saas-starter-workspace",
+            "title": "SaaS Starter Workspace",
+            "description": "Multi-project SaaS foundation with FastAPI and NestJS services covering auth, billing, admin operations, and webhook processing.",
+            "path": "saas-starter-workspace",
+            "tags": [
+                "SaaS",
+                "FastAPI",
+                "NestJS",
+                "Stripe",
+                "Webhooks",
+                "Multi-Project"
+            ],
+            "featured": true,
+            "difficulty": "advanced",
+            "lastModified": "2026-02-16T00:00:00Z",
+            "tutorialLinks": [],
+            "projects": [
+                {
+                    "id": "saas-api",
+                    "name": "saas-api",
+                    "type": "fastapi",
+                    "displayName": "SaaS API (FastAPI)",
+                    "description": "Main SaaS backend with auth, profile, subscription, billing, and team endpoints.",
+                    "path": "saas-starter-workspace/saas-api",
+                    "features": [
+                        "JWT + Session auth",
+                        "OAuth providers",
+                        "Profile management",
+                        "Subscriptions and billing",
+                        "Teams/workspaces",
+                        "Rate limiting"
+                    ],
+                    "endpoints": [
+                        "POST /auth/register",
+                        "POST /auth/login",
+                        "GET /auth/oauth/{provider}",
+                        "GET /users/profile",
+                        "GET /subscriptions/plans",
+                        "POST /subscriptions/checkout",
+                        "GET /teams"
+                    ],
+                    "defaultPort": 8000
+                },
+                {
+                    "id": "saas-admin",
+                    "name": "saas-admin",
+                    "type": "fastapi",
+                    "displayName": "SaaS Admin (FastAPI)",
+                    "description": "Admin backend for user moderation, subscription overview, and platform metrics.",
+                    "path": "saas-starter-workspace/saas-admin",
+                    "features": [
+                        "Admin auth",
+                        "User management",
+                        "Subscription overview",
+                        "Metrics and health"
+                    ],
+                    "endpoints": [
+                        "POST /admin/auth/login",
+                        "GET /admin/users",
+                        "PUT /admin/users/{user_id}/ban",
+                        "GET /admin/subscriptions",
+                        "GET /admin/health"
+                    ],
+                    "defaultPort": 8001
+                },
+                {
+                    "id": "saas-nest",
+                    "name": "saas-nest",
+                    "type": "nestjs",
+                    "displayName": "SaaS API (NestJS)",
+                    "description": "NestJS parity service demonstrating shared auth/profile workflows and standardized module health endpoints.",
+                    "path": "saas-starter-workspace/saas-nest",
+                    "features": [
+                        "NestJS framework comparison",
+                        "Auth/profile parity",
+                        "Swagger docs",
+                        "Shared /api/health/module/* routes"
+                    ],
+                    "endpoints": [
+                        "POST /auth/register",
+                        "POST /auth/login",
+                        "GET /auth/me",
+                        "GET /users/profile",
+                        "GET /api/health/module/{module}"
+                    ],
+                    "defaultPort": 8002
+                },
+                {
+                    "id": "saas-webhooks",
+                    "name": "saas-webhooks",
+                    "type": "fastapi",
+                    "displayName": "SaaS Webhooks (FastAPI)",
+                    "description": "Webhook ingestion service for Stripe events with signature verification, replay, and retry-oriented processing.",
+                    "path": "saas-starter-workspace/saas-webhooks",
+                    "features": [
+                        "Stripe webhook intake",
+                        "Signature verification",
+                        "Webhook logs",
+                        "Replay endpoint",
+                        "Background processing",
+                        "Email notification hooks"
+                    ],
+                    "endpoints": [
+                        "POST /api/webhooks/stripe",
+                        "GET /api/webhooks/logs",
+                        "POST /api/webhooks/replay/{event_id}"
+                    ],
+                    "defaultPort": 8003
+                }
+            ],
+            "requirements": {
+                "python": ">=3.10",
+                "node": ">=20",
+                "rapidkit": ">=0.9.0",
+                "docker": "recommended"
+            },
+            "quickStart": {
+                "workspace": [
+                    "cd saas-starter-workspace",
+                    "npx rapidkit doctor --workspace"
+                ],
+                "saas-api": [
+                    "cd saas-starter-workspace/saas-api",
+                    "source .rapidkit/activate",
+                    "rapidkit init",
+                    "rapidkit dev"
+                ],
+                "saas-admin": [
+                    "cd saas-starter-workspace/saas-admin",
+                    "source .rapidkit/activate",
+                    "rapidkit init",
+                    "rapidkit dev -p 8001"
+                ],
+                "saas-nest": [
+                    "cd saas-starter-workspace/saas-nest",
+                    "source .rapidkit/activate",
+                    "rapidkit init",
+                    "rapidkit dev -p 8002"
+                ],
+                "saas-webhooks": [
+                    "cd saas-starter-workspace/saas-webhooks",
+                    "source .rapidkit/activate",
+                    "rapidkit init",
+                    "rapidkit dev -p 8003"
                 ]
             }
         }

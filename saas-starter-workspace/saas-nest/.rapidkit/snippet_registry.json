@@ -1,0 +1,1866 @@
+{
+  "snippets": {
+    "logging_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:32:14.697880+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:32:14.697880+00:00"
+    },
+    "logging_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:32:14.704058+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:32:14.704058+00:00"
+    },
+    "logging_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:32:14.709938+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:32:14.709938+00:00"
+    },
+    "logging_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:32:14.715606+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:32:14.715606+00:00"
+    },
+    "logging_settings_fields_nestjs::configuration.ts": {
+      "anchor": "// <<<inject:settings-fields>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": "src/modules/free/essentials/settings/configuration.ts",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:32:14.754457+00:00",
+      "template": "logging_fields_nestjs.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "nestjs/standard",
+      "target": "src/modules/free/essentials/settings/configuration.ts",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "async_queue": true,
+          "file_path": "logs/app.log",
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:32:14.754457+00:00"
+    },
+    "auth_core_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:43.295522+00:00",
+      "template": "auth_env.snippet.j2",
+      "module_slug": "free/auth/core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "auth_core_defaults": {
+          "pepper_env": "RAPIDKIT_AUTH_CORE_PEPPER"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_AUTH_CORE_PEPPER": {
+            "type": "str",
+            "default": "",
+            "description": "Strong pepper secret used when hashing tokens and passwords"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:43.295522+00:00"
+    },
+    "auth_core_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:43.298503+00:00",
+      "template": "auth_env.snippet.j2",
+      "module_slug": "free/auth/core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "auth_core_defaults": {
+          "pepper_env": "RAPIDKIT_AUTH_CORE_PEPPER"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_AUTH_CORE_PEPPER": {
+            "type": "str",
+            "default": "",
+            "description": "Strong pepper secret used when hashing tokens and passwords"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:43.298503+00:00"
+    },
+    "auth_core_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:43.301393+00:00",
+      "template": "auth_env.snippet.j2",
+      "module_slug": "free/auth/core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "auth_core_defaults": {
+          "pepper_env": "RAPIDKIT_AUTH_CORE_PEPPER"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_AUTH_CORE_PEPPER": {
+            "type": "str",
+            "default": "",
+            "description": "Strong pepper secret used when hashing tokens and passwords"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:43.301393+00:00"
+    },
+    "auth_core_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:43.304164+00:00",
+      "template": "auth_env.snippet.j2",
+      "module_slug": "free/auth/core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "auth_core_defaults": {
+          "pepper_env": "RAPIDKIT_AUTH_CORE_PEPPER"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_AUTH_CORE_PEPPER": {
+            "type": "str",
+            "default": "",
+            "description": "Strong pepper secret used when hashing tokens and passwords"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:43.304164+00:00"
+    },
+    "auth_core_quickstart::README.md": {
+      "anchor": "<!-- <<<inject:module-snippet>>> -->",
+      "version": "0.1.0",
+      "priority": 5,
+      "file": "src/README.md",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:43.343491+00:00",
+      "template": "core.snippet.j2",
+      "module_slug": "free/auth/core",
+      "profile": "nestjs/standard",
+      "target": "README.md",
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:43.343491+00:00"
+    },
+    "oauth_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:45.035225+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:45.035225+00:00"
+    },
+    "oauth_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:45.040009+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:45.040009+00:00"
+    },
+    "oauth_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:45.045001+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:45.045001+00:00"
+    },
+    "oauth_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:45.050751+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:45.050751+00:00"
+    },
+    "oauth_settings_fields_nestjs::configuration.ts": {
+      "anchor": "// <<<inject:configuration>>>",
+      "version": "0.1.0",
+      "priority": 20,
+      "file": "src/config/configuration.ts",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:45.090533+00:00",
+      "template": "settings_fields_nestjs.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "nestjs/standard",
+      "target": "src/config/configuration.ts",
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:45.090533+00:00"
+    },
+    "oauth_quickstart::README.md": {
+      "anchor": "<!-- <<<inject:module-snippet>>> -->",
+      "version": "0.1.0",
+      "priority": 5,
+      "file": "src/README.md",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:45.094550+00:00",
+      "template": "oauth.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "nestjs/standard",
+      "target": "README.md",
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:45.094550+00:00"
+    },
+    "security_headers_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:05.242140+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/security/security_headers",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "SECURITY_HEADERS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable or disable Security Headers globally"
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_MAX_AGE": {
+            "type": "int",
+            "default": 63072000
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_INCLUDE_SUBDOMAINS": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_PRELOAD": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY_REPORT_ONLY": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_REFERRER_POLICY": {
+            "type": "str",
+            "default": "strict-origin-when-cross-origin"
+          },
+          "SECURITY_HEADERS_X_CONTENT_TYPE_OPTIONS": {
+            "type": "str",
+            "default": "nosniff"
+          },
+          "SECURITY_HEADERS_X_FRAME_OPTIONS": {
+            "type": "str",
+            "default": "DENY"
+          },
+          "SECURITY_HEADERS_X_XSS_PROTECTION": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_EMBEDDER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_OPENER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_RESOURCE_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_PERMISSIONS_POLICY": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string for Permissions-Policy (optional)"
+          },
+          "SECURITY_HEADERS_EXPECT_CT": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_X_DNS_PREFETCH_CONTROL": {
+            "type": "str",
+            "default": "off"
+          },
+          "SECURITY_HEADERS_X_DOWNLOAD_OPTIONS": {
+            "type": "str",
+            "default": "noopen"
+          },
+          "SECURITY_HEADERS_ADDITIONAL_HEADERS": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string of extra headers to set (optional)"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:57.354211+00:00",
+      "last_error": "already present in .env"
+    },
+    "security_headers_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env.dev",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:05.245899+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/security/security_headers",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "SECURITY_HEADERS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable or disable Security Headers globally"
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_MAX_AGE": {
+            "type": "int",
+            "default": 63072000
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_INCLUDE_SUBDOMAINS": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_PRELOAD": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY_REPORT_ONLY": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_REFERRER_POLICY": {
+            "type": "str",
+            "default": "strict-origin-when-cross-origin"
+          },
+          "SECURITY_HEADERS_X_CONTENT_TYPE_OPTIONS": {
+            "type": "str",
+            "default": "nosniff"
+          },
+          "SECURITY_HEADERS_X_FRAME_OPTIONS": {
+            "type": "str",
+            "default": "DENY"
+          },
+          "SECURITY_HEADERS_X_XSS_PROTECTION": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_EMBEDDER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_OPENER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_RESOURCE_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_PERMISSIONS_POLICY": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string for Permissions-Policy (optional)"
+          },
+          "SECURITY_HEADERS_EXPECT_CT": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_X_DNS_PREFETCH_CONTROL": {
+            "type": "str",
+            "default": "off"
+          },
+          "SECURITY_HEADERS_X_DOWNLOAD_OPTIONS": {
+            "type": "str",
+            "default": "noopen"
+          },
+          "SECURITY_HEADERS_ADDITIONAL_HEADERS": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string of extra headers to set (optional)"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:57.357060+00:00",
+      "last_error": "already present in .env.dev"
+    },
+    "security_headers_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env.prod",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:05.249657+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/security/security_headers",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "SECURITY_HEADERS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable or disable Security Headers globally"
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_MAX_AGE": {
+            "type": "int",
+            "default": 63072000
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_INCLUDE_SUBDOMAINS": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_PRELOAD": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY_REPORT_ONLY": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_REFERRER_POLICY": {
+            "type": "str",
+            "default": "strict-origin-when-cross-origin"
+          },
+          "SECURITY_HEADERS_X_CONTENT_TYPE_OPTIONS": {
+            "type": "str",
+            "default": "nosniff"
+          },
+          "SECURITY_HEADERS_X_FRAME_OPTIONS": {
+            "type": "str",
+            "default": "DENY"
+          },
+          "SECURITY_HEADERS_X_XSS_PROTECTION": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_EMBEDDER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_OPENER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_RESOURCE_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_PERMISSIONS_POLICY": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string for Permissions-Policy (optional)"
+          },
+          "SECURITY_HEADERS_EXPECT_CT": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_X_DNS_PREFETCH_CONTROL": {
+            "type": "str",
+            "default": "off"
+          },
+          "SECURITY_HEADERS_X_DOWNLOAD_OPTIONS": {
+            "type": "str",
+            "default": "noopen"
+          },
+          "SECURITY_HEADERS_ADDITIONAL_HEADERS": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string of extra headers to set (optional)"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:57.360926+00:00",
+      "last_error": "already present in .env.prod"
+    },
+    "security_headers_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env.example",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:05.253398+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/security/security_headers",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "SECURITY_HEADERS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable or disable Security Headers globally"
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_MAX_AGE": {
+            "type": "int",
+            "default": 63072000
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_INCLUDE_SUBDOMAINS": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_STRICT_TRANSPORT_SECURITY_PRELOAD": {
+            "type": "bool",
+            "default": true
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CONTENT_SECURITY_POLICY_REPORT_ONLY": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_REFERRER_POLICY": {
+            "type": "str",
+            "default": "strict-origin-when-cross-origin"
+          },
+          "SECURITY_HEADERS_X_CONTENT_TYPE_OPTIONS": {
+            "type": "str",
+            "default": "nosniff"
+          },
+          "SECURITY_HEADERS_X_FRAME_OPTIONS": {
+            "type": "str",
+            "default": "DENY"
+          },
+          "SECURITY_HEADERS_X_XSS_PROTECTION": {
+            "type": "bool",
+            "default": false
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_EMBEDDER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_OPENER_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_CROSS_ORIGIN_RESOURCE_POLICY": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_PERMISSIONS_POLICY": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string for Permissions-Policy (optional)"
+          },
+          "SECURITY_HEADERS_EXPECT_CT": {
+            "type": "str",
+            "default": ""
+          },
+          "SECURITY_HEADERS_X_DNS_PREFETCH_CONTROL": {
+            "type": "str",
+            "default": "off"
+          },
+          "SECURITY_HEADERS_X_DOWNLOAD_OPTIONS": {
+            "type": "str",
+            "default": "noopen"
+          },
+          "SECURITY_HEADERS_ADDITIONAL_HEADERS": {
+            "type": "str",
+            "default": "",
+            "description": "JSON object string of extra headers to set (optional)"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:57.364060+00:00",
+      "last_error": "already present in .env.example"
+    },
+    "security_headers_quickstart::README.md": {
+      "anchor": "<!-- <<<inject:module-snippet>>> -->",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": "src/README.md",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:05.257892+00:00",
+      "template": "security_headers.snippet.j2",
+      "module_slug": "free/security/security_headers",
+      "profile": "nestjs/standard",
+      "target": "README.md",
+      "context": {
+        "sample_policy": "default-src 'self'; img-src 'self' data:; object-src 'none'",
+        "sample_permissions": {
+          "geolocation": [],
+          "camera": [],
+          "microphone": []
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:57.420813+00:00",
+      "last_error": "already present in README.md"
+    },
+    "db_postgres_env_defaults::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:00.008039+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.079985+00:00",
+      "last_error": "already present in .env"
+    },
+    "db_postgres_env_defaults::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env.dev",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:00.011258+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.083445+00:00",
+      "last_error": "already present in .env.dev"
+    },
+    "db_postgres_env_defaults::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env.prod",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:00.014432+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.086596+00:00",
+      "last_error": "already present in .env.prod"
+    },
+    "db_postgres_env_defaults::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env.example",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:00.017880+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.089601+00:00",
+      "last_error": "already present in .env.example"
+    },
+    "db_postgres_settings_fields_nestjs::configuration.ts": {
+      "anchor": "// <<<inject:configuration>>>",
+      "version": "1.0.0",
+      "priority": 5,
+      "file": "src/config/configuration.ts",
+      "status": "failed",
+      "last_attempt_at": "2026-02-15T20:35:00.023695+00:00",
+      "template": "db_postgres_settings_fields_nestjs.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "nestjs/standard",
+      "target": "src/config/configuration.ts",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false,
+        "db_expire_on_commit": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.095556+00:00",
+      "last_error": "already present in configuration.ts"
+    },
+    "users_core_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 15,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:58.224607+00:00",
+      "template": "users_core.snippet.j2",
+      "module_slug": "free/users/users_core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.example,.env.dev,.env.prod",
+      "context": {
+        "fragment": "env"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "USERS_DEFAULT_LOCALE": {
+            "type": "string",
+            "default": "en",
+            "description": "Default locale assigned to new users."
+          },
+          "USERS_ALLOW_REGISTRATION": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle whether public sign-up is enabled."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.224607+00:00"
+    },
+    "users_core_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 15,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:58.234299+00:00",
+      "template": "users_core.snippet.j2",
+      "module_slug": "free/users/users_core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.example,.env.dev,.env.prod",
+      "context": {
+        "fragment": "env"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "USERS_DEFAULT_LOCALE": {
+            "type": "string",
+            "default": "en",
+            "description": "Default locale assigned to new users."
+          },
+          "USERS_ALLOW_REGISTRATION": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle whether public sign-up is enabled."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.234299+00:00"
+    },
+    "users_core_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 15,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:58.243529+00:00",
+      "template": "users_core.snippet.j2",
+      "module_slug": "free/users/users_core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.example,.env.dev,.env.prod",
+      "context": {
+        "fragment": "env"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "USERS_DEFAULT_LOCALE": {
+            "type": "string",
+            "default": "en",
+            "description": "Default locale assigned to new users."
+          },
+          "USERS_ALLOW_REGISTRATION": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle whether public sign-up is enabled."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.243529+00:00"
+    },
+    "users_core_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 15,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:34:58.253116+00:00",
+      "template": "users_core.snippet.j2",
+      "module_slug": "free/users/users_core",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.example,.env.dev,.env.prod",
+      "context": {
+        "fragment": "env"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "USERS_DEFAULT_LOCALE": {
+            "type": "string",
+            "default": "en",
+            "description": "Default locale assigned to new users."
+          },
+          "USERS_ALLOW_REGISTRATION": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle whether public sign-up is enabled."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:34:58.253116+00:00"
+    },
+    "redis_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:35:01.727346+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:35:01.727346+00:00"
+    },
+    "redis_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:35:01.733223+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:35:01.733223+00:00"
+    },
+    "redis_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:35:01.739328+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:35:01.739328+00:00"
+    },
+    "redis_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:35:01.745354+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "nestjs/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:35:01.745354+00:00"
+    },
+    "redis_settings_fields_nestjs::configuration.ts": {
+      "anchor": "// <<<inject:configuration>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": "src/config/configuration.ts",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:35:01.784538+00:00",
+      "template": "redis_fields_nestjs.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "nestjs/standard",
+      "target": "src/config/configuration.ts",
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-15T20:35:01.784538+00:00"
+    },
+    "redis_quickstart::README.md": {
+      "anchor": "<!-- <<<inject:module-snippet>>> -->",
+      "version": "1.0.0",
+      "priority": 5,
+      "file": "src/README.md",
+      "status": "applied",
+      "last_attempt_at": "2026-02-15T20:35:01.790182+00:00",
+      "template": "redis.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "nestjs/standard",
+      "target": "README.md",
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "applied_at": "2026-02-15T20:35:01.790182+00:00"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+"""API router assembly bridging DDD presentation routes."""
+
+from __future__ import annotations
+
+from src.app.presentation.api.router import get_api_router
+from .health import router as health_router
+from .notes import router as notes_router
+from .saas import router as saas_router
+# <<<inject:router-imports>>>
+
+api_router = get_api_router()
+api_router.include_router(health_router, prefix="/health", tags=["health"])
+api_router.include_router(notes_router, prefix="/examples", tags=["examples"])
+api_router.include_router(saas_router)
+# <<<inject:router-mount>>>

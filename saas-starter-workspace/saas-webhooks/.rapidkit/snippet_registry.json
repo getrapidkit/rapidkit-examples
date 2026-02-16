@@ -1,0 +1,1907 @@
+{
+  "snippets": {
+    "logging_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:27:43.645510+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:27:43.645510+00:00"
+    },
+    "logging_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:27:43.651182+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:27:43.651182+00:00"
+    },
+    "logging_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:27:43.656725+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:27:43.656725+00:00"
+    },
+    "logging_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:27:43.662112+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "file_path": "logs/app.log",
+          "async_queue": true,
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Default logging level",
+            "validation": "^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$"
+          },
+          "LOG_FORMAT": {
+            "type": "str",
+            "default": "json",
+            "description": "Log output format",
+            "validation": "^(json|text|colored)$"
+          },
+          "LOG_SINKS": {
+            "type": "string",
+            "default": "[\"stderr\"]",
+            "description": "JSON list of configured sinks (stderr,file,syslog)"
+          },
+          "LOG_FILE_PATH": {
+            "type": "str",
+            "default": "logs/app.log",
+            "description": "File path when file sink is enabled"
+          },
+          "LOG_ASYNC_QUEUE": {
+            "type": "bool",
+            "default": true,
+            "description": "Use async queue dispatch for handlers"
+          },
+          "LOG_SAMPLING_RATE": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Sampling rate for verbose loggers"
+          },
+          "LOG_ENABLE_REDACTION": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable masking of sensitive values"
+          },
+          "LOGGING_HEALTHCHECK_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle logging module health probe"
+          },
+          "LOGGING_HEALTHCHECK_PATH": {
+            "type": "str",
+            "default": "/api/health/module/logging",
+            "description": "Health endpoint path exposed by logging module"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:27:43.662112+00:00"
+    },
+    "logging_settings_fields::settings.py": {
+      "anchor": "# <<<inject:settings-fields>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": "src/modules/free/essentials/settings/settings.py",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:27:43.665431+00:00",
+      "template": "logging_fields.snippet.j2",
+      "module_slug": "free/essentials/logging",
+      "profile": "fastapi/standard",
+      "target": "src/modules/free/essentials/settings/settings.py",
+      "patch_mode": "ast_py",
+      "context": {
+        "logging_defaults": {
+          "level": "INFO",
+          "format": "json",
+          "sinks": [
+            "stderr"
+          ],
+          "async_queue": true,
+          "file_path": "logs/app.log",
+          "sampling_rate": 1.0,
+          "enable_redaction": true,
+          "correlation_header": "X-Request-ID",
+          "healthcheck_enabled": true,
+          "healthcheck_path": "/api/health/module/logging"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:27:43.665431+00:00"
+    },
+    "db_postgres_settings_fields::settings.py": {
+      "anchor": "# <<<inject:settings-fields>>>",
+      "version": "1.0.0",
+      "priority": 5,
+      "file": "src/modules/free/essentials/settings/settings.py",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:51.844355+00:00",
+      "template": "settings_fields.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "fastapi/standard",
+      "target": "src/modules/free/essentials/settings/settings.py",
+      "patch_mode": "ast_py",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false,
+        "db_expire_on_commit": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:51.844355+00:00"
+    },
+    "db_postgres_env_defaults::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:51.847400+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:51.847400+00:00"
+    },
+    "db_postgres_env_defaults::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:51.849653+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:51.849653+00:00"
+    },
+    "db_postgres_env_defaults::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:51.852026+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:51.852026+00:00"
+    },
+    "db_postgres_env_defaults::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 8,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:51.854335+00:00",
+      "template": "db_postgres.snippet.j2",
+      "module_slug": "free/database/db_postgres",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "database_url": "postgresql://postgres:postgres@localhost:5432/myapp",
+        "test_database_url": "postgresql://postgres:postgres@localhost:5432/myapp_test",
+        "db_pool_size": 10,
+        "db_max_overflow": 20,
+        "db_pool_recycle": 3600,
+        "db_pool_timeout": 30,
+        "db_echo": false
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:51.854335+00:00"
+    },
+    "redis_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:54.859128+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:54.859128+00:00"
+    },
+    "redis_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:54.864435+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:54.864435+00:00"
+    },
+    "redis_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:54.869586+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:54.869586+00:00"
+    },
+    "redis_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:54.874906+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Full redis:// URL (preferred)",
+            "validation": "^redis://[\\w\\-.:@]+(:[0-9]+)?(/[0-9]+)?$"
+          },
+          "REDIS_HOST": {
+            "type": "str",
+            "default": "localhost"
+          },
+          "REDIS_PORT": {
+            "type": "int",
+            "default": 6379
+          },
+          "REDIS_DB": {
+            "type": "int",
+            "default": 0
+          },
+          "REDIS_PASSWORD": {
+            "type": "str",
+            "default": ""
+          },
+          "REDIS_USE_TLS": {
+            "type": "bool",
+            "default": false
+          },
+          "CACHE_TTL": {
+            "type": "int",
+            "default": 3600,
+            "description": "Default cache TTL in seconds"
+          },
+          "REDIS_PRECONNECT": {
+            "type": "bool",
+            "default": false,
+            "description": "If true the app will attempt to connect to Redis on startup"
+          },
+          "REDIS_CONNECT_RETRIES": {
+            "type": "int",
+            "default": 3,
+            "description": "Number of connection attempts for Redis client"
+          },
+          "REDIS_CONNECT_BACKOFF_BASE": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Base backoff in seconds for Redis connection retry"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:54.874906+00:00"
+    },
+    "redis_settings_fields::settings.py": {
+      "anchor": "# <<<inject:settings-fields>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": "src/modules/free/essentials/settings/settings.py",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:54.886059+00:00",
+      "template": "redis_fields.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "fastapi/standard",
+      "target": "src/modules/free/essentials/settings/settings.py",
+      "patch_mode": "ast_py",
+      "context": {
+        "redis_defaults": {
+          "url": "redis://localhost:6379/0",
+          "host": "localhost",
+          "port": 6379,
+          "db": 0,
+          "password": "",
+          "use_tls": false,
+          "preconnect": false,
+          "connect_retries": 3,
+          "connect_backoff_base": 0.5,
+          "cache_ttl": 3600
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:54.886059+00:00"
+    },
+    "redis_quickstart::README.md": {
+      "anchor": "<!-- <<<inject:module-snippet>>> -->",
+      "version": "1.0.0",
+      "priority": 5,
+      "file": "src/README.md",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:54.942489+00:00",
+      "template": "redis.snippet.j2",
+      "module_slug": "free/cache/redis",
+      "profile": "fastapi/standard",
+      "target": "README.md",
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "applied_at": "2026-02-16T06:28:54.942489+00:00"
+    },
+    "celery_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 30,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:56.229657+00:00",
+      "template": "celery.snippet.j2",
+      "module_slug": "free/tasks/celery",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.example",
+      "context": {
+        "defaults": {
+          "broker_url": "redis://localhost:6379/0",
+          "result_backend": "redis://localhost:6379/1",
+          "default_queue": "default"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_CELERY_BROKER_URL": {
+            "type": "string",
+            "default": "redis://localhost:6379/0"
+          },
+          "RAPIDKIT_CELERY_RESULT_BACKEND": {
+            "type": "string",
+            "default": "redis://localhost:6379/1"
+          },
+          "RAPIDKIT_CELERY_DEFAULT_QUEUE": {
+            "type": "string",
+            "default": "default"
+          },
+          "RAPIDKIT_CELERY_ENABLE_UTC": {
+            "type": "boolean",
+            "default": true
+          },
+          "RAPIDKIT_CELERY_TIMEZONE": {
+            "type": "string",
+            "default": "UTC"
+          },
+          "RAPIDKIT_CELERY_IMPORTS": {
+            "type": "string",
+            "default": "apps.workers.tasks"
+          },
+          "RAPIDKIT_CELERY_INCLUDE": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_CELERY_AUTODISCOVER": {
+            "type": "string",
+            "default": "apps.workers"
+          }
+        },
+        "additionalProperties": true
+      },
+      "applied_at": "2026-02-16T06:28:56.229657+00:00"
+    },
+    "celery_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 30,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:56.233988+00:00",
+      "template": "celery.snippet.j2",
+      "module_slug": "free/tasks/celery",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.example",
+      "context": {
+        "defaults": {
+          "broker_url": "redis://localhost:6379/0",
+          "result_backend": "redis://localhost:6379/1",
+          "default_queue": "default"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_CELERY_BROKER_URL": {
+            "type": "string",
+            "default": "redis://localhost:6379/0"
+          },
+          "RAPIDKIT_CELERY_RESULT_BACKEND": {
+            "type": "string",
+            "default": "redis://localhost:6379/1"
+          },
+          "RAPIDKIT_CELERY_DEFAULT_QUEUE": {
+            "type": "string",
+            "default": "default"
+          },
+          "RAPIDKIT_CELERY_ENABLE_UTC": {
+            "type": "boolean",
+            "default": true
+          },
+          "RAPIDKIT_CELERY_TIMEZONE": {
+            "type": "string",
+            "default": "UTC"
+          },
+          "RAPIDKIT_CELERY_IMPORTS": {
+            "type": "string",
+            "default": "apps.workers.tasks"
+          },
+          "RAPIDKIT_CELERY_INCLUDE": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_CELERY_AUTODISCOVER": {
+            "type": "string",
+            "default": "apps.workers"
+          }
+        },
+        "additionalProperties": true
+      },
+      "applied_at": "2026-02-16T06:28:56.233988+00:00"
+    },
+    "email_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:57.452414+00:00",
+      "template": "email.snippet.j2",
+      "module_slug": "free/communication/email",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.example,.env.local",
+      "context": {
+        "defaults": {
+          "provider": "smtp",
+          "from_email": "noreply@rapidkit.top",
+          "smtp_host": "localhost",
+          "smtp_port": 1025
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_EMAIL_ENABLED": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle email delivery on or off."
+          },
+          "RAPIDKIT_EMAIL_PROVIDER": {
+            "type": "string",
+            "default": "smtp",
+            "enum": [
+              "smtp",
+              "console"
+            ],
+            "description": "Select the email transport provider."
+          },
+          "RAPIDKIT_EMAIL_FROM_ADDRESS": {
+            "type": "string",
+            "default": "noreply@rapidkit.top"
+          },
+          "RAPIDKIT_EMAIL_FROM_NAME": {
+            "type": "string",
+            "default": "RapidKit"
+          },
+          "RAPIDKIT_EMAIL_SMTP_HOST": {
+            "type": "string",
+            "default": "localhost"
+          },
+          "RAPIDKIT_EMAIL_SMTP_PORT": {
+            "type": "integer",
+            "default": 1025
+          },
+          "RAPIDKIT_EMAIL_SMTP_USERNAME": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_EMAIL_SMTP_PASSWORD": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_EMAIL_SMTP_USE_TLS": {
+            "type": "boolean",
+            "default": false
+          },
+          "RAPIDKIT_EMAIL_TEMPLATE_DIRECTORY": {
+            "type": "string",
+            "default": "templates/email",
+            "description": "Directory containing Jinja email templates."
+          },
+          "RAPIDKIT_EMAIL_DRY_RUN": {
+            "type": "boolean",
+            "default": false,
+            "description": "Skip delivery while still rendering templates."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:57.452414+00:00"
+    },
+    "email_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:57.458441+00:00",
+      "template": "email.snippet.j2",
+      "module_slug": "free/communication/email",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.example,.env.local",
+      "context": {
+        "defaults": {
+          "provider": "smtp",
+          "from_email": "noreply@rapidkit.top",
+          "smtp_host": "localhost",
+          "smtp_port": 1025
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_EMAIL_ENABLED": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle email delivery on or off."
+          },
+          "RAPIDKIT_EMAIL_PROVIDER": {
+            "type": "string",
+            "default": "smtp",
+            "enum": [
+              "smtp",
+              "console"
+            ],
+            "description": "Select the email transport provider."
+          },
+          "RAPIDKIT_EMAIL_FROM_ADDRESS": {
+            "type": "string",
+            "default": "noreply@rapidkit.top"
+          },
+          "RAPIDKIT_EMAIL_FROM_NAME": {
+            "type": "string",
+            "default": "RapidKit"
+          },
+          "RAPIDKIT_EMAIL_SMTP_HOST": {
+            "type": "string",
+            "default": "localhost"
+          },
+          "RAPIDKIT_EMAIL_SMTP_PORT": {
+            "type": "integer",
+            "default": 1025
+          },
+          "RAPIDKIT_EMAIL_SMTP_USERNAME": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_EMAIL_SMTP_PASSWORD": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_EMAIL_SMTP_USE_TLS": {
+            "type": "boolean",
+            "default": false
+          },
+          "RAPIDKIT_EMAIL_TEMPLATE_DIRECTORY": {
+            "type": "string",
+            "default": "templates/email",
+            "description": "Directory containing Jinja email templates."
+          },
+          "RAPIDKIT_EMAIL_DRY_RUN": {
+            "type": "boolean",
+            "default": false,
+            "description": "Skip delivery while still rendering templates."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:57.458441+00:00"
+    },
+    "email_env::.env.local": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": ".env.local",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:28:57.463820+00:00",
+      "template": "email.snippet.j2",
+      "module_slug": "free/communication/email",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.example,.env.local",
+      "context": {
+        "defaults": {
+          "provider": "smtp",
+          "from_email": "noreply@rapidkit.top",
+          "smtp_host": "localhost",
+          "smtp_port": 1025
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_EMAIL_ENABLED": {
+            "type": "boolean",
+            "default": true,
+            "description": "Toggle email delivery on or off."
+          },
+          "RAPIDKIT_EMAIL_PROVIDER": {
+            "type": "string",
+            "default": "smtp",
+            "enum": [
+              "smtp",
+              "console"
+            ],
+            "description": "Select the email transport provider."
+          },
+          "RAPIDKIT_EMAIL_FROM_ADDRESS": {
+            "type": "string",
+            "default": "noreply@rapidkit.top"
+          },
+          "RAPIDKIT_EMAIL_FROM_NAME": {
+            "type": "string",
+            "default": "RapidKit"
+          },
+          "RAPIDKIT_EMAIL_SMTP_HOST": {
+            "type": "string",
+            "default": "localhost"
+          },
+          "RAPIDKIT_EMAIL_SMTP_PORT": {
+            "type": "integer",
+            "default": 1025
+          },
+          "RAPIDKIT_EMAIL_SMTP_USERNAME": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_EMAIL_SMTP_PASSWORD": {
+            "type": "string",
+            "default": ""
+          },
+          "RAPIDKIT_EMAIL_SMTP_USE_TLS": {
+            "type": "boolean",
+            "default": false
+          },
+          "RAPIDKIT_EMAIL_TEMPLATE_DIRECTORY": {
+            "type": "string",
+            "default": "templates/email",
+            "description": "Directory containing Jinja email templates."
+          },
+          "RAPIDKIT_EMAIL_DRY_RUN": {
+            "type": "boolean",
+            "default": false,
+            "description": "Skip delivery while still rendering templates."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:28:57.463820+00:00"
+    },
+    "notifications_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:29:02.352806+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/communication/notifications",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "notifications_defaults": {
+          "enabled": true,
+          "log_level": "INFO",
+          "smtp": {
+            "host": "localhost",
+            "port": 587,
+            "username": "",
+            "password": "",
+            "use_tls": true,
+            "timeout": 30
+          },
+          "sender": {
+            "from_email": "noreply@rapidkit.local",
+            "from_name": "RapidKit Notifications",
+            "reply_to": ""
+          },
+          "retry": {
+            "max_attempts": 3,
+            "backoff_seconds": 2.0,
+            "initial_delay_seconds": 1.0
+          },
+          "templates": {
+            "directory": "./templates/notifications",
+            "auto_reload": false
+          },
+          "rate_limit": {
+            "enabled": false,
+            "max_per_minute": 0,
+            "max_per_hour": 0
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_NOTIFICATIONS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle notifications module wiring"
+          },
+          "RAPIDKIT_NOTIFICATIONS_LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Logging level for notifications runtime"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_HOST": {
+            "type": "str",
+            "default": "localhost",
+            "description": "SMTP host used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PORT": {
+            "type": "int",
+            "default": 587,
+            "description": "SMTP port used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USERNAME": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP username"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PASSWORD": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP password"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USE_TLS": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable STARTTLS for SMTP connections"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_TIMEOUT": {
+            "type": "int",
+            "default": 30,
+            "description": "Socket timeout in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_EMAIL": {
+            "type": "str",
+            "default": "noreply@rapidkit.local",
+            "description": "Default From email address"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_NAME": {
+            "type": "str",
+            "default": "RapidKit Notifications",
+            "description": "Sender display name"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_REPLY_TO": {
+            "type": "str",
+            "default": "",
+            "description": "Optional Reply-To header"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_DIRECTORY": {
+            "type": "str",
+            "default": "./templates/notifications",
+            "description": "Template directory used by EmailService"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_AUTO_RELOAD": {
+            "type": "bool",
+            "default": false,
+            "description": "Reload templates on every render"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_MAX_ATTEMPTS": {
+            "type": "int",
+            "default": 3,
+            "description": "Maximum retry attempts for email delivery"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_BACKOFF_SECONDS": {
+            "type": "number",
+            "default": 2.0,
+            "description": "Exponential backoff multiplier in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_INITIAL_DELAY_SECONDS": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Initial retry delay in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": false,
+            "description": "Expose rate limiting metadata in health payloads"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_MINUTE": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per minute cap"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_HOUR": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per hour cap"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:29:02.352806+00:00"
+    },
+    "notifications_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:29:02.364154+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/communication/notifications",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "notifications_defaults": {
+          "enabled": true,
+          "log_level": "INFO",
+          "smtp": {
+            "host": "localhost",
+            "port": 587,
+            "username": "",
+            "password": "",
+            "use_tls": true,
+            "timeout": 30
+          },
+          "sender": {
+            "from_email": "noreply@rapidkit.local",
+            "from_name": "RapidKit Notifications",
+            "reply_to": ""
+          },
+          "retry": {
+            "max_attempts": 3,
+            "backoff_seconds": 2.0,
+            "initial_delay_seconds": 1.0
+          },
+          "templates": {
+            "directory": "./templates/notifications",
+            "auto_reload": false
+          },
+          "rate_limit": {
+            "enabled": false,
+            "max_per_minute": 0,
+            "max_per_hour": 0
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_NOTIFICATIONS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle notifications module wiring"
+          },
+          "RAPIDKIT_NOTIFICATIONS_LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Logging level for notifications runtime"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_HOST": {
+            "type": "str",
+            "default": "localhost",
+            "description": "SMTP host used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PORT": {
+            "type": "int",
+            "default": 587,
+            "description": "SMTP port used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USERNAME": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP username"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PASSWORD": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP password"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USE_TLS": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable STARTTLS for SMTP connections"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_TIMEOUT": {
+            "type": "int",
+            "default": 30,
+            "description": "Socket timeout in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_EMAIL": {
+            "type": "str",
+            "default": "noreply@rapidkit.local",
+            "description": "Default From email address"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_NAME": {
+            "type": "str",
+            "default": "RapidKit Notifications",
+            "description": "Sender display name"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_REPLY_TO": {
+            "type": "str",
+            "default": "",
+            "description": "Optional Reply-To header"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_DIRECTORY": {
+            "type": "str",
+            "default": "./templates/notifications",
+            "description": "Template directory used by EmailService"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_AUTO_RELOAD": {
+            "type": "bool",
+            "default": false,
+            "description": "Reload templates on every render"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_MAX_ATTEMPTS": {
+            "type": "int",
+            "default": 3,
+            "description": "Maximum retry attempts for email delivery"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_BACKOFF_SECONDS": {
+            "type": "number",
+            "default": 2.0,
+            "description": "Exponential backoff multiplier in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_INITIAL_DELAY_SECONDS": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Initial retry delay in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": false,
+            "description": "Expose rate limiting metadata in health payloads"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_MINUTE": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per minute cap"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_HOUR": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per hour cap"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:29:02.364154+00:00"
+    },
+    "notifications_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:29:02.375674+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/communication/notifications",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "notifications_defaults": {
+          "enabled": true,
+          "log_level": "INFO",
+          "smtp": {
+            "host": "localhost",
+            "port": 587,
+            "username": "",
+            "password": "",
+            "use_tls": true,
+            "timeout": 30
+          },
+          "sender": {
+            "from_email": "noreply@rapidkit.local",
+            "from_name": "RapidKit Notifications",
+            "reply_to": ""
+          },
+          "retry": {
+            "max_attempts": 3,
+            "backoff_seconds": 2.0,
+            "initial_delay_seconds": 1.0
+          },
+          "templates": {
+            "directory": "./templates/notifications",
+            "auto_reload": false
+          },
+          "rate_limit": {
+            "enabled": false,
+            "max_per_minute": 0,
+            "max_per_hour": 0
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_NOTIFICATIONS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle notifications module wiring"
+          },
+          "RAPIDKIT_NOTIFICATIONS_LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Logging level for notifications runtime"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_HOST": {
+            "type": "str",
+            "default": "localhost",
+            "description": "SMTP host used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PORT": {
+            "type": "int",
+            "default": 587,
+            "description": "SMTP port used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USERNAME": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP username"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PASSWORD": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP password"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USE_TLS": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable STARTTLS for SMTP connections"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_TIMEOUT": {
+            "type": "int",
+            "default": 30,
+            "description": "Socket timeout in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_EMAIL": {
+            "type": "str",
+            "default": "noreply@rapidkit.local",
+            "description": "Default From email address"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_NAME": {
+            "type": "str",
+            "default": "RapidKit Notifications",
+            "description": "Sender display name"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_REPLY_TO": {
+            "type": "str",
+            "default": "",
+            "description": "Optional Reply-To header"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_DIRECTORY": {
+            "type": "str",
+            "default": "./templates/notifications",
+            "description": "Template directory used by EmailService"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_AUTO_RELOAD": {
+            "type": "bool",
+            "default": false,
+            "description": "Reload templates on every render"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_MAX_ATTEMPTS": {
+            "type": "int",
+            "default": 3,
+            "description": "Maximum retry attempts for email delivery"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_BACKOFF_SECONDS": {
+            "type": "number",
+            "default": 2.0,
+            "description": "Exponential backoff multiplier in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_INITIAL_DELAY_SECONDS": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Initial retry delay in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": false,
+            "description": "Expose rate limiting metadata in health payloads"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_MINUTE": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per minute cap"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_HOUR": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per hour cap"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:29:02.375674+00:00"
+    },
+    "notifications_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:29:02.388139+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/communication/notifications",
+      "profile": "fastapi/standard",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "notifications_defaults": {
+          "enabled": true,
+          "log_level": "INFO",
+          "smtp": {
+            "host": "localhost",
+            "port": 587,
+            "username": "",
+            "password": "",
+            "use_tls": true,
+            "timeout": 30
+          },
+          "sender": {
+            "from_email": "noreply@rapidkit.local",
+            "from_name": "RapidKit Notifications",
+            "reply_to": ""
+          },
+          "retry": {
+            "max_attempts": 3,
+            "backoff_seconds": 2.0,
+            "initial_delay_seconds": 1.0
+          },
+          "templates": {
+            "directory": "./templates/notifications",
+            "auto_reload": false
+          },
+          "rate_limit": {
+            "enabled": false,
+            "max_per_minute": 0,
+            "max_per_hour": 0
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_NOTIFICATIONS_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Toggle notifications module wiring"
+          },
+          "RAPIDKIT_NOTIFICATIONS_LOG_LEVEL": {
+            "type": "str",
+            "default": "INFO",
+            "description": "Logging level for notifications runtime"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_HOST": {
+            "type": "str",
+            "default": "localhost",
+            "description": "SMTP host used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PORT": {
+            "type": "int",
+            "default": 587,
+            "description": "SMTP port used for outbound email"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USERNAME": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP username"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_PASSWORD": {
+            "type": "str",
+            "default": "",
+            "description": "Optional SMTP password"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_USE_TLS": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable STARTTLS for SMTP connections"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SMTP_TIMEOUT": {
+            "type": "int",
+            "default": 30,
+            "description": "Socket timeout in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_EMAIL": {
+            "type": "str",
+            "default": "noreply@rapidkit.local",
+            "description": "Default From email address"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_FROM_NAME": {
+            "type": "str",
+            "default": "RapidKit Notifications",
+            "description": "Sender display name"
+          },
+          "RAPIDKIT_NOTIFICATIONS_SENDER_REPLY_TO": {
+            "type": "str",
+            "default": "",
+            "description": "Optional Reply-To header"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_DIRECTORY": {
+            "type": "str",
+            "default": "./templates/notifications",
+            "description": "Template directory used by EmailService"
+          },
+          "RAPIDKIT_NOTIFICATIONS_TEMPLATE_AUTO_RELOAD": {
+            "type": "bool",
+            "default": false,
+            "description": "Reload templates on every render"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_MAX_ATTEMPTS": {
+            "type": "int",
+            "default": 3,
+            "description": "Maximum retry attempts for email delivery"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_BACKOFF_SECONDS": {
+            "type": "number",
+            "default": 2.0,
+            "description": "Exponential backoff multiplier in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RETRY_INITIAL_DELAY_SECONDS": {
+            "type": "number",
+            "default": 1.0,
+            "description": "Initial retry delay in seconds"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": false,
+            "description": "Expose rate limiting metadata in health payloads"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_MINUTE": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per minute cap"
+          },
+          "RAPIDKIT_NOTIFICATIONS_RATE_LIMIT_MAX_PER_HOUR": {
+            "type": "int",
+            "default": 0,
+            "description": "Optional emails per hour cap"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:29:02.388139+00:00"
+    },
+    "notifications_settings_fields::settings.py": {
+      "anchor": "# <<<inject:settings-fields>>>",
+      "version": "1.0.0",
+      "priority": 20,
+      "file": "src/modules/free/essentials/settings/settings.py",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T06:29:02.406421+00:00",
+      "template": "settings_fields.snippet.j2",
+      "module_slug": "free/communication/notifications",
+      "profile": "fastapi/standard",
+      "target": "src/modules/free/essentials/settings/settings.py",
+      "patch_mode": "ast_py",
+      "context": {
+        "notifications_defaults": {
+          "enabled": true,
+          "log_level": "INFO",
+          "smtp": {
+            "host": "localhost",
+            "port": 587,
+            "username": "",
+            "password": "",
+            "use_tls": true,
+            "timeout": 30
+          },
+          "sender": {
+            "from_email": "noreply@rapidkit.local",
+            "from_name": "RapidKit Notifications",
+            "reply_to": ""
+          },
+          "retry": {
+            "max_attempts": 3,
+            "backoff_seconds": 2.0,
+            "initial_delay_seconds": 1.0
+          },
+          "templates": {
+            "directory": "./templates/notifications",
+            "auto_reload": false
+          },
+          "rate_limit": {
+            "enabled": false,
+            "max_per_minute": 0,
+            "max_per_hour": 0
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T06:29:02.406421+00:00"
+    }
+  }
+}

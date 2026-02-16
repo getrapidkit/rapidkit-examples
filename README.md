@@ -52,6 +52,26 @@ This repository contains production-style reference implementations that accompa
 
 ---
 
+### 3. SaaS Starter Workspace (🏢 Advanced)
+
+**Path:** [saas-starter-workspace](saas-starter-workspace)
+
+**Description:** Complete multi-project SaaS backend foundation with FastAPI + NestJS + webhooks.
+
+**Includes:**
+- `saas-api` (FastAPI): Main API for auth, profiles, subscriptions, billing, teams
+- `saas-admin` (FastAPI): Admin backend for user moderation and metrics
+- `saas-nest` (NestJS): Framework parity implementation + shared module health routes
+- `saas-webhooks` (FastAPI): Stripe webhook intake, logs, replay, retry-oriented processing
+
+**Modules:** `settings`, `logging`, `db_postgres`, `redis`, `auth_core`, `oauth`, `session`, `users_core`, `users_profiles`, `stripe_payment`, `cart`, `inventory`, `security_headers`, `rate_limiting`, `celery`, `email`, `notifications`
+
+**Articles:**
+- Medium: Draft available in `Front/Docs/Articles/Medium.com/13.md`
+- Dev.to: Draft available in `Front/Docs/Articles/Dev.To/13.md`
+
+---
+
 ## ⚡ Quick Start
 
 ### Quickstart Workspace (Beginner - 5 minutes)
@@ -109,6 +129,38 @@ rapidkit dev -p 8013
 - 📡 Streaming: `POST /ai/assistant/stream`
 - 🎫 Support Ticket: `POST /support/ticket`
 
+---
+
+### SaaS Starter Workspace (Advanced)
+
+```bash
+git clone https://github.com/getrapidkit/rapidkit-examples.git
+cd rapidkit-examples/saas-starter-workspace
+npx rapidkit doctor --workspace
+```
+
+**Run each service:**
+
+```bash
+# Main SaaS API
+cd saas-api && source .rapidkit/activate && rapidkit init && rapidkit dev
+
+# Admin API
+cd ../saas-admin && source .rapidkit/activate && rapidkit init && rapidkit dev -p 8001
+
+# NestJS API
+cd ../saas-nest && source .rapidkit/activate && rapidkit init && rapidkit dev -p 8002
+
+# Webhooks service
+cd ../saas-webhooks && source .rapidkit/activate && rapidkit init && rapidkit dev -p 8003
+```
+
+**Key endpoints:**
+- `saas-api`: `/auth/register`, `/subscriptions/plans`, `/teams`
+- `saas-admin`: `/admin/users`, `/admin/subscriptions`, `/admin/health`
+- `saas-nest`: `/docs`, `/api/health/module/{module}`
+- `saas-webhooks`: `POST /api/webhooks/stripe`, `GET /api/webhooks/logs`, `POST /api/webhooks/replay/{event_id}`
+
 ## 🔍 Workspace Health Check
 
 **Quickstart Workspace:**
@@ -122,6 +174,13 @@ npx rapidkit doctor --workspace
 
 ```bash
 cd my-ai-workspace
+npx rapidkit doctor --workspace
+```
+
+**SaaS Starter Workspace:**
+
+```bash
+cd saas-starter-workspace
 npx rapidkit doctor --workspace
 ```
 
@@ -155,13 +214,20 @@ rapidkit-examples/
 │       ├── docker-compose.yml  # Postgres + Redis
 │       └── Dockerfile          # Production image
 │
-└── my-ai-workspace/            # 🤖 Intermediate (10 minutes)
+├── my-ai-workspace/            # 🤖 Intermediate (10 minutes)
     ├── README.md               # Workspace guide
     ├── ai-agent/               # FastAPI AI assistant
     │   ├── README.md
     │   └── EXAMPLE_README.md   # Tutorial walkthrough
     └── ai-agent-nest/          # NestJS implementation
         └── README.md
+│
+└── saas-starter-workspace/     # 🏢 Advanced (15-20 minutes)
+    ├── README.md               # Workspace guide
+    ├── saas-api/               # Main SaaS API (FastAPI)
+    ├── saas-admin/             # Admin API (FastAPI)
+    ├── saas-nest/              # Framework comparison (NestJS)
+    └── saas-webhooks/          # Stripe webhook processor (FastAPI)
 ```
 
 ## 📚 Documentation Structure
@@ -175,6 +241,13 @@ rapidkit-examples/
 - [my-ai-workspace/ai-agent/README.md](my-ai-workspace/ai-agent/README.md) - FastAPI run/test commands
 - [my-ai-workspace/ai-agent/EXAMPLE_README.md](my-ai-workspace/ai-agent/EXAMPLE_README.md) - Tutorial walkthrough
 - [my-ai-workspace/ai-agent-nest/README.md](my-ai-workspace/ai-agent-nest/README.md) - NestJS parity guide
+
+**SaaS Starter Workspace:**
+- [saas-starter-workspace/README.md](saas-starter-workspace/README.md) - Workspace setup & commands
+- [saas-starter-workspace/saas-api/README.md](saas-starter-workspace/saas-api/README.md) - Main SaaS API
+- [saas-starter-workspace/saas-admin/README.md](saas-starter-workspace/saas-admin/README.md) - Admin service
+- [saas-starter-workspace/saas-nest/README.md](saas-starter-workspace/saas-nest/README.md) - NestJS parity service
+- [saas-starter-workspace/saas-webhooks/README.md](saas-starter-workspace/saas-webhooks/README.md) - Webhooks processor
 
 ---
 

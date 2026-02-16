@@ -2,7 +2,7 @@
 name = "product-api"
 version = "0.1.0"
 description = "FastAPI service generated with RapidKit"
-authors = ["rapidx <you@example.com>"]
+authors = ["rapidkit team"]
 license = "MIT"
 packages = [{ include = "src" }]
 
