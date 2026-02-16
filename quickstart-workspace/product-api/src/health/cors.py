@@ -11,7 +11,7 @@ from types import ModuleType
 from typing import Any, Optional
 
 _VENDOR_MODULE = "cors"
-_VENDOR_VERSION = "0.1.1"
+_VENDOR_VERSION = "0.1.9"
 _VENDOR_RELATIVE_PATH = "src/health/cors.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_cors"

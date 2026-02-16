@@ -27,7 +27,7 @@
     "config/cache/redis.yaml": {
       "hash": "4a54f89bc563376d1bca54824092c61ceed0a98b0c7c07d457badd51bb3acbe2",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "config/communication/notifications.yaml": {
       "hash": "94df3239f10d66915a98891d5bbecafa50e837e6144537a871c9f982136bfba1",
@@ -37,7 +37,7 @@
     "config/database/postgres.yaml": {
       "hash": "fbf0a88e1a6071eea015f2d3c19c2a3979be4741c9168c458940eca601d13cde",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "config/tasks/celery.yaml": {
       "hash": "9843be9e7353eb58d385b234ea47ce054b55e1d8700011ce879d5f6ba3c567db",
@@ -51,9 +51,9 @@
       "version": "0.1.10"
     },
     "src/health/__init__.py": {
-      "hash": "302663af763d7879eb6aebbbbec1a0c9435e014a6f42514c2d9183e92adc974d",
-      "module": "notifications",
-      "version": "0.1.25"
+      "hash": "fa1a704ef1ab80baed85605e43c0ba892369b47e1518260512319ebeec79b4f4",
+      "module": "db_postgres",
+      "version": "0.1.28"
     },
     "src/health/celery.py": {
       "hash": "f194b79dda8c363f9d93b3f96dd6388b04c40df21c323ae5a5bb2ab031db474d",
@@ -86,19 +86,19 @@
       "version": "0.1.25"
     },
     "src/health/postgres.py": {
-      "hash": "36c5d2ee97f6fdaec7731c3950c96f1d5336254076bb9689f6742c97a4ac1032",
+      "hash": "54e194e61b0d715cdf9e354485c59f09f152e9c1685f78225e827ae3ff478c26",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "src/health/redis.py": {
-      "hash": "302b13d2f6d0f6c7951edc62975256842b5b2ac74b6641cab6d9208fbb556867",
+      "hash": "e98c4fae51ce57bf9c70eac03190ec7948f5299eb4858a01178e8dc8896e5507",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/health/registry.py": {
       "hash": "5913b8b9f802b0dd8d26b639d2b8ee02b193dc8aa6d95d53cfe78e554bfde58c",
-      "module": "notifications",
-      "version": "0.1.25"
+      "module": "db_postgres",
+      "version": "0.1.28"
     },
     "src/health/settings.py": {
       "hash": "9a3637c00c50a3cdfca6bfb9dd0e77529ae01495d443c8b36a72131ad406d2b6",
@@ -106,24 +106,24 @@
       "version": "0.1.41"
     },
     "src/modules/free/cache/redis/__init__.py": {
-      "hash": "575f75f3f1d9c268eb27908dacfee223aa13de89fcdb93b427a3d9d2329efe69",
+      "hash": "d3974f90e1d4054f89b63279442c7ec17a094643ec7475c5bd64c4df7cd6d8b1",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/cache/redis/client.py": {
-      "hash": "5d193028c416282880ab9892672e17948e0de3866b2b33c50aa320840cf6ddcd",
+      "hash": "78de230c03b46c97a4c0ce85505b089fc4e7d89b541d7c1ebad44b5500892ecb",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/cache/redis/redis.py": {
       "hash": "cad9e7c3eab6f6db50c83e4864c85379de8865aa2119f19ae1194cf71fe9e99c",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/cache/redis/routers/redis.py": {
       "hash": "a189fa92f0c675770738b7c1216d661653966b6b0a57cd59c794e5e386aeb121",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/communication/email/config/email.yaml": {
       "hash": "d4f0a242875736fcf2b1a8b49ce461008dd92d2e3821042430ce97e96c8176ae",
@@ -158,7 +158,7 @@
     "src/modules/free/database/db_postgres/postgres.py": {
       "hash": "01629e72ee87c27aae20867553ffa6bb220e78432ae637167767aeaae041698c",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "src/modules/free/essentials/deployment/config/deployment.yaml": {
       "hash": "67d57ba0e16c4e212e15975d39709219bfff24a74b01f486f68d6ce36233017a",
@@ -248,7 +248,7 @@
     "tests/modules/e2e/free/cache/redis/test_redis_e2e.py": {
       "hash": "7d1f607edb1fe079187b6fd3b86ef51369964d9c4fb8c61a16c22ead3c3ff42b",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "tests/modules/e2e/free/communication/email/test_email_e2e.py": {
       "hash": "9e12451e8073cd1098aacda3d9e0735bca4073656acdcffc9a5ab32f347d65cd",
@@ -281,9 +281,9 @@
       "version": "0.1.8"
     },
     "tests/modules/free/cache/redis/test_redis_integration.py": {
-      "hash": "ff8a54cb8577b0d5642df3885c4d8937fb8a0c20531e4684c5da1048eb5c3a3e",
+      "hash": "89fc362be3321e4344aaed345feb3c00366d49f6b8722874bd041226463e3821",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "tests/modules/free/communication/email/conftest.py": {
       "hash": "b1c79154102d495dcbf42b781854026ba793d386e959b11416456153b355f805",
@@ -323,7 +323,7 @@
     "tests/modules/integration/database/test_postgres_integration.py": {
       "hash": "393dc98ede9e3bc4c07e540640529402cdff3bc0b33c901730cc1af0efbee3d9",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "tests/modules/integration/tasks/test_celery_integration.py": {
       "hash": "e0253e8259945ee1372f23c84458ada036ce1e5187850d0aa3561ad4961b8925",

@@ -11,7 +11,7 @@ from types import ModuleType
 from typing import Any, Optional
 
 _VENDOR_MODULE = "auth_core"
-_VENDOR_VERSION = "0.1.1"
+_VENDOR_VERSION = "0.1.10"
 _VENDOR_RELATIVE_PATH = "src/health/auth_core.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_auth_core"

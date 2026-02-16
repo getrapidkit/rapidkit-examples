@@ -95,7 +95,7 @@ const DEFAULTS: RedisDefaults = {
 };
 
 export const DB_REDIS_VENDOR_MODULE = 'redis';
-export const DB_REDIS_VENDOR_VERSION = '0.1.15';
+export const DB_REDIS_VENDOR_VERSION = '0.1.17';
 
 @Injectable()
 export class RedisService

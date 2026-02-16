@@ -6,7 +6,7 @@
       "priority": 10,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-12T09:14:39.449609+00:00",
+      "last_attempt_at": "2026-02-16T11:48:28.850198+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -81,7 +81,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-12T09:14:39.449609+00:00"
+      "applied_at": "2026-02-16T11:48:28.850198+00:00"
     },
     "logging_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -89,7 +89,7 @@
       "priority": 10,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-12T09:14:39.455422+00:00",
+      "last_attempt_at": "2026-02-16T11:48:28.860204+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -164,7 +164,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-12T09:14:39.455422+00:00"
+      "applied_at": "2026-02-16T11:48:28.860204+00:00"
     },
     "logging_env::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
@@ -172,7 +172,7 @@
       "priority": 10,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-12T09:14:39.461457+00:00",
+      "last_attempt_at": "2026-02-16T11:48:28.873132+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -247,7 +247,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-12T09:14:39.461457+00:00"
+      "applied_at": "2026-02-16T11:48:28.873132+00:00"
     },
     "logging_env::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
@@ -255,7 +255,7 @@
       "priority": 10,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-12T09:14:39.467372+00:00",
+      "last_attempt_at": "2026-02-16T11:48:28.882475+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -330,15 +330,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-12T09:14:39.467372+00:00"
+      "applied_at": "2026-02-16T11:48:28.882475+00:00"
     },
     "logging_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "1.0.0",
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "applied",
-      "last_attempt_at": "2026-02-12T09:14:39.471025+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T11:48:28.889219+00:00",
       "template": "logging_fields.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -367,7 +367,8 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-12T09:14:39.471025+00:00"
+      "applied_at": "2026-02-12T09:14:39.471025+00:00",
+      "last_error": "already present in settings.py"
     }
   }
 }

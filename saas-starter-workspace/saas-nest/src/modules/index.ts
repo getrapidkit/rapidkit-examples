@@ -31,8 +31,7 @@ const optionalModules: Array<ModuleRef | null> = [
 	registerOptionalModule(() => require('../health/rate-limiting-health.module').RateLimitingHealthModule as ModuleRef),
 	registerOptionalModule(() => require('./free/security/security_headers/security-headers/security-headers.module').SecurityHeadersModule.register() as ModuleRef),
 	registerOptionalModule(() => require('../health/security-headers-health.module').SecurityHeadersHealthModule as ModuleRef),
+	// <<<inject:module-exports>>>
 ];
 
 export const rapidkitModules: ModuleRef[] = optionalModules.filter(Boolean) as ModuleRef[];
-
-// <<<inject:module-exports>>>

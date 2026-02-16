@@ -27,7 +27,7 @@
     "config/cache/redis.yaml": {
       "hash": "4a54f89bc563376d1bca54824092c61ceed0a98b0c7c07d457badd51bb3acbe2",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "config/cart.yaml": {
       "hash": "1c1b892ad9c56b0e996ee4e43f86b813cade780be35e9f10385f70e1b1bf9e41",
@@ -37,7 +37,7 @@
     "config/database/postgres.yaml": {
       "hash": "fbf0a88e1a6071eea015f2d3c19c2a3979be4741c9168c458940eca601d13cde",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "config/inventory.yaml": {
       "hash": "9d7495280e22805336bf81f9888633ef41add2f169b3b6e979897cd586bfc8e5",
@@ -47,27 +47,27 @@
     "config/oauth.yaml": {
       "hash": "06321ef69039ee6f0c34d9908cc10250de0af860481c34c7cdff0384ed4f008d",
       "module": "oauth",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "config/security/cors.yaml": {
       "hash": "457fcb546b2f3fba731d614bb0efcf5e3a3b602c1f86be5d83ca3bfcd8769233",
       "module": "cors",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "config/security/rate_limiting.yaml": {
       "hash": "9d59a30ae97591ee5481d383659cde5d6cd7a30b06c97df3f6484cb9c9d27a13",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "config/security/security_headers.yaml": {
       "hash": "8af3f1ca16948b42ec7abbfa933536e7d4ca23fdf903d0918440ac30d828f1ad",
       "module": "security_headers",
-      "version": "0.1.1"
+      "version": "0.1.3"
     },
     "config/session.yaml": {
       "hash": "889e4f91620b52ca53d8339b34ca3bbae476a4d8cf4f63d7db130ca9022e303d",
       "module": "session",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "config/stripe_payment.yaml": {
       "hash": "46e9aec24d763798f3c4fb6e4d34d8c63969aee2f8286407943fcaa811e4ed9c",
@@ -77,7 +77,7 @@
     "config/users/users_profiles.yaml": {
       "hash": "0b8ca752ea8b67cf174e881e43a95f3695af8eac77a9008ea46722311aee62d5",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "docker-compose.yml": {
       "hash": "8248322ecd3df6222ed83e503090a301e6ca9a72705b8bdda83ee14033317cf5",
@@ -88,12 +88,12 @@
     "src/health/__init__.py": {
       "hash": "ba984080d6ab3fab87ac0e145d50bf2f0bf4cae23614a49c4b5f36e02d160916",
       "module": "security_headers",
-      "version": "0.1.1"
+      "version": "0.1.3"
     },
     "src/health/auth_core.py": {
-      "hash": "c1f2abc55644161827ff0bf3aaab1c8a1730326cf0944b2a8c7c121b1dc5883d",
+      "hash": "2258885fb8a201beb11b90259d2f8c2530f81d92765f47b0ef22a41232e4014d",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/health/cart.py": {
       "hash": "d8a87cdf2744b0cd5b955cb1ecb31793d97832cbae22bacc441255819c5d8f24",
@@ -101,9 +101,9 @@
       "version": "0.1.5"
     },
     "src/health/cors.py": {
-      "hash": "02e0661e0f6ee668b99d945065001e0076ce249eb3b52be7163dc2476ba31e11",
+      "hash": "956fcdb503b99ea550b47e4cce9616b808938372f38ae3431ac38ebbcf79c394",
       "module": "cors",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/health/deployment.py": {
       "hash": "ab426c1f0976a9cd585ce5f793b170ce76195887664c398b3387c26b28ed5cb4",
@@ -126,39 +126,39 @@
       "version": "0.1.20"
     },
     "src/health/oauth.py": {
-      "hash": "6a0439e5a332fa9350ea591e283327f3a780032445c97c1d47ad5716dc7c9390",
+      "hash": "347092b467c32a062fedf0fe50fd6edc2c229319b065857e764631b444652a26",
       "module": "oauth",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/health/postgres.py": {
-      "hash": "36c5d2ee97f6fdaec7731c3950c96f1d5336254076bb9689f6742c97a4ac1032",
+      "hash": "54e194e61b0d715cdf9e354485c59f09f152e9c1685f78225e827ae3ff478c26",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "src/health/rate_limiting.py": {
-      "hash": "af4ea6365b8cd13ea0e8e96eae951835dc860a761f15f0095a83b496292c9ad5",
+      "hash": "0573d855bea2bdad443167649f053eccb41d7aba40d1bab2868e03370841a701",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/health/redis.py": {
-      "hash": "302b13d2f6d0f6c7951edc62975256842b5b2ac74b6641cab6d9208fbb556867",
+      "hash": "e98c4fae51ce57bf9c70eac03190ec7948f5299eb4858a01178e8dc8896e5507",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/health/registry.py": {
       "hash": "5913b8b9f802b0dd8d26b639d2b8ee02b193dc8aa6d95d53cfe78e554bfde58c",
-      "module": "security_headers",
-      "version": "0.1.1"
+      "module": "users_profiles",
+      "version": "0.1.8"
     },
     "src/health/security_headers.py": {
-      "hash": "4fb8c2052f56ee9f78dfd008b7cebb3402fff5bfba3982799a41e67a7796aa5d",
+      "hash": "b16c1b122a73c8703de3e3838ecb0541433721b31cdde75fdbbc0c50051bcbb6",
       "module": "security_headers",
-      "version": "0.1.1"
+      "version": "0.1.3"
     },
     "src/health/session.py": {
-      "hash": "4110d7d60598a9746e858bc9f0e864d412b51c332312c53a009b8ad92932acbd",
+      "hash": "4819e309870144e2d1532a98b9beb851c845b2363acaa1e4da08b372ce291e3a",
       "module": "session",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/health/settings.py": {
       "hash": "9a3637c00c50a3cdfca6bfb9dd0e77529ae01495d443c8b36a72131ad406d2b6",
@@ -176,9 +176,9 @@
       "version": "0.1.7"
     },
     "src/health/users_profiles.py": {
-      "hash": "3482f3714c9d1b531b0465f29f1be0074817907acc29bc1f436f538275d63cc0",
+      "hash": "b361e0c3858b82db091f996391367cb0e735ffa1be1f56c59084ecafbc2b057a",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/auth/core/auth/core.py": {
       "hash": "bd0b47ef8021967d6d953547defda170feebd9b9772520c7d1ddd71ac249ec0a",
@@ -188,62 +188,62 @@
     "src/modules/free/auth/core/auth/core_types.py": {
       "hash": "83c8f7bdbe6e0e4986581dd08a8d0d6877edc77035f6c86bec6512512468c0ba",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/core/auth/dependencies.py": {
       "hash": "fd429648f76963b78d4245f6485d4c2dd86398152334a67b94378f9289397f5b",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/core/auth/jwt_advanced.py": {
       "hash": "3f1c00bc30bc9b302fdef5b8e8e5d645da145330126b3fd2a73416d809e6b5e8",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/core/auth/rbac.py": {
       "hash": "bc81608724d8b29d8ed3c044fdc4ec038037df648bcba3765755c3f0d50fd537",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/core/config/auth_core.yaml": {
       "hash": "3363ec430c5a81023fc0bf51c8d23dec64020bd79430294e0ebd785d0bff2106",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/core/routers/auth_core.py": {
       "hash": "6ef27398f7dd0d6b1598e8e674f89055f6565a02933c9d3426e21210aa4db91b",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/oauth/oauth.py": {
       "hash": "4a546ee4fe0de2b7082c40a8b47a31e01ff08397130f960ac8d1d8eb5d812a55",
       "module": "oauth",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/oauth/oauth_types.py": {
       "hash": "9958e6602bab15331fca5501557dcba9c420ccf7a2bb7e682c212c6b46aa31e3",
       "module": "oauth",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/oauth/routers/oauth.py": {
       "hash": "67bdedf368718762cdc43051f5b07b880e24df201831fb2a3e702ef18a6ad449",
       "module": "oauth",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "src/modules/free/auth/session/routers/session.py": {
       "hash": "85426556620c1e5db8ac9b02594ea1b3e81e71586501b60de721c6cf0f2998b9",
       "module": "session",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/auth/session/session.py": {
       "hash": "30c62eb165964d33137b9ab22f340b59a464b25f3ef69d72f7da0775d5fdd678",
       "module": "session",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/auth/session/session_types.py": {
       "hash": "6f3dba30ce032f3cd95ac61d0bb822853781edf9889ae49f40ce50bebc4f399c",
       "module": "session",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/billing/cart/cart.py": {
       "hash": "f72ea0db182ad002973b95886040a705299213fefc9742134d66b48a8ab8658c",
@@ -291,29 +291,29 @@
       "version": "0.1.2"
     },
     "src/modules/free/cache/redis/__init__.py": {
-      "hash": "575f75f3f1d9c268eb27908dacfee223aa13de89fcdb93b427a3d9d2329efe69",
+      "hash": "d3974f90e1d4054f89b63279442c7ec17a094643ec7475c5bd64c4df7cd6d8b1",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/cache/redis/client.py": {
-      "hash": "5d193028c416282880ab9892672e17948e0de3866b2b33c50aa320840cf6ddcd",
+      "hash": "78de230c03b46c97a4c0ce85505b089fc4e7d89b541d7c1ebad44b5500892ecb",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/cache/redis/redis.py": {
       "hash": "cad9e7c3eab6f6db50c83e4864c85379de8865aa2119f19ae1194cf71fe9e99c",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/cache/redis/routers/redis.py": {
       "hash": "a189fa92f0c675770738b7c1216d661653966b6b0a57cd59c794e5e386aeb121",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "src/modules/free/database/db_postgres/postgres.py": {
       "hash": "01629e72ee87c27aae20867553ffa6bb220e78432ae637167767aeaae041698c",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "src/modules/free/essentials/deployment/config/deployment.yaml": {
       "hash": "67d57ba0e16c4e212e15975d39709219bfff24a74b01f486f68d6ce36233017a",
@@ -393,52 +393,52 @@
     "src/modules/free/security/cors/cors.py": {
       "hash": "cae7384a962b84c6a10e6eb564386e8af969e1406a1f99c89f7fa8144ba8ec3a",
       "module": "cors",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/cors/cors_types.py": {
       "hash": "5ca41c33a056d982eabfe1fcdcc9c87407750b8d87723ecdb7c770cf8991f78e",
       "module": "cors",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/cors/routers/cors.py": {
       "hash": "a56732debc0534668672252cd286af8aa17c6c8a57878adc92848d5d433f3e59",
       "module": "cors",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/rate_limiting/__init__.py": {
-      "hash": "aabe8cba5267c55b34b29051d57e07bc7326928b64da0139cdf3ccb6671cc737",
+      "hash": "48f1a88a74a63d43099a3a41407a14ddd4738954427c8ddc5d801ba8406e2ad6",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/rate_limiting/dependencies.py": {
       "hash": "9de42213185b4982a9796f527f0c2c635944c3939ab7adffe6183e7bbbcaa4cb",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/rate_limiting/rate_limiting_types.py": {
       "hash": "341c5ae7cfce820b88b0fd925ec39f2a74bf745bdff7aa7e0606c10d516db357",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/rate_limiting/router.py": {
       "hash": "3c0e954d1d576e9db72822266f054618f8f59f2c00169542a7f88045ff8362b8",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/rate_limiting/routes.py": {
       "hash": "ad7350e464ae1fa15bd4f42108510485c7a8d2c813e3025f89d0e14167bfffc0",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "src/modules/free/security/security_headers/routers/security_headers.py": {
       "hash": "7cc8ab5d6bdec57dfe031e65100c7383d2ff30ac473e862b62129190fdeb5e18",
       "module": "security_headers",
-      "version": "0.1.1"
+      "version": "0.1.3"
     },
     "src/modules/free/security/security_headers/security_headers.py": {
-      "hash": "43ff9d18c73f78decac3350fd89a3f2c77f3cd03bdceedb6548df8453e62fa60",
+      "hash": "57f72e323dc73c7435f6a567ef0b570fefdae8113aaa23300ca3356cf1f790d7",
       "module": "security_headers",
-      "version": "0.1.1"
+      "version": "0.1.3"
     },
     "src/modules/free/users/users_core/config/users_core.yaml": {
       "hash": "8422a779141551dc24ef44517b9b322b3e0a0835faa3ed55b951ceacf30d3533",
@@ -513,32 +513,32 @@
     "src/modules/free/users/users_profiles/core/users/profiles/__init__.py": {
       "hash": "02e43608dc32f47af89d27b48fd4e6d5ae1c60c13e66f2289625d449c403621f",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/dependencies.py": {
       "hash": "01379120dfb7a9583686339fd76ad33382c3d5a52b5708f6f66e226953b66302",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/dto.py": {
       "hash": "e496db715c86fc1501c3bf9b06a0a3c86b1f16caec233ac07b12cc553612cd84",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/errors.py": {
       "hash": "51c299b484b6d44396c3fbef1e51ac8e1b4cf689f241829272195081ae5e1eb0",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/in_memory_repository.py": {
       "hash": "14158b23cef20b9e77c2103b72d495f4017e50057798bf0ed83a10ac6819a1a5",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/metadata_routes.py": {
       "hash": "e37d155154b6c1aa9a9686b23c188479d77955d09b68e00b76f172d7c9122fd5",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/models.py": {
       "hash": "791a9e21680dedd24a818f92aaee17ba87a6281e6654164653d8679cd8767477",
@@ -548,52 +548,52 @@
     "src/modules/free/users/users_profiles/core/users/profiles/repository.py": {
       "hash": "35c2eee2d208f60d2da14bee6491b438eab0ddff7afe3d158e9b1730eb49e352",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/router.py": {
       "hash": "4a996e66c59621f4841c31da7fe68dcf19ba8975f645adad350ebce86567d144",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/runtime.py": {
       "hash": "66d7e27e7f301f0df5a714541c5f014f191ba993dcd8f985404ea9982bc5ad90",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/service.py": {
       "hash": "5cac4f66d07520f536217450573a4f3fb97df9337ebe873d18910554a5cbd664",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/core/users/profiles/settings.py": {
       "hash": "045cce0e8e91a85db3788bbbacc2e93e0d15f2392856faa330c6204314f37648",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/users_profiles.py": {
-      "hash": "fb81376cfc2091de3a7c12ee705aba2be91722fe3703e9236dbc07b63910e37a",
+      "hash": "56242df5e689c5bfd3de219e1edf55190d6809f62a1708b04ebb1685c34efc89",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "src/modules/free/users/users_profiles/users_profiles_types.py": {
-      "hash": "35fe3c804eb28151452fcaeeef5d72b6864de6fa6443e3b0cf2c5a3ad7ae2359",
+      "hash": "379e2de8ed88308d294764a1425a364c0c11fe6aa8dc7102ee6989e1b6c676e3",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "tests/modules/e2e/free/auth/core/test_core_e2e.py": {
       "hash": "ff92b6a76a47a9418beb59f18174b5da145350bdd34404afce82230e7cd4f841",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "tests/modules/e2e/free/auth/oauth/test_oauth_e2e.py": {
       "hash": "ec98a8beee656de872118fc19161a3067fcdd4231df5c86c37252bad600b0ff9",
       "module": "oauth",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "tests/modules/e2e/free/auth/session/test_session_e2e.py": {
       "hash": "c4238cc46dd5dbb6887a728c282e0f8d050c47b8842fad25562e2c737060c1e1",
       "module": "session",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "tests/modules/e2e/free/billing/cart/test_cart_e2e.py": {
       "hash": "5448315441b601156440a384827fda5f0488e0050335cbb75379dfdcc3d33fcf",
@@ -613,7 +613,7 @@
     "tests/modules/e2e/free/cache/redis/test_redis_e2e.py": {
       "hash": "7d1f607edb1fe079187b6fd3b86ef51369964d9c4fb8c61a16c22ead3c3ff42b",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "tests/modules/e2e/free/essentials/deployment/test_deployment_e2e.py": {
       "hash": "84de2e0228b04447a2171ffddb20e39d8d5febc1f8d2d2be08ce0bb5bd6c6d80",
@@ -638,17 +638,17 @@
     "tests/modules/e2e/free/security/cors/test_cors_e2e.py": {
       "hash": "006990f6bb10f17733ce6e83aa383fe8d11a49b343fbf5878ddbc620d36571c3",
       "module": "cors",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "tests/modules/e2e/free/security/rate_limiting/test_rate_limiting_e2e.py": {
       "hash": "cab6f425b80f867780bcc6b7a91ad70d87e652e559f03ea661b274ed7f7d7f9b",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "tests/modules/e2e/free/security/security_headers/test_security_headers_e2e.py": {
       "hash": "d98683d9c262dc676dcb826b4872463e75fb56f1ab92d82a43b17719d02949fe",
       "module": "security_headers",
-      "version": "0.1.1"
+      "version": "0.1.3"
     },
     "tests/modules/e2e/free/users/users_core/test_users_core_e2e.py": {
       "hash": "ddd883539d9f822959de3c60588a513425f091ae0930cfc0755e563d9532eabb",
@@ -658,22 +658,22 @@
     "tests/modules/e2e/free/users/users_profiles/test_users_profiles_e2e.py": {
       "hash": "6bd93c67e5b23a3c1308895855f0175ea71ab47166161c6b6376663f9d0f11f2",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "tests/modules/free/auth/core/test_auth_core_integration.py": {
       "hash": "5d69f40250e7d538291bfe734da24b1ca09d074184a44624ef31745bb0b8070b",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "tests/modules/free/auth/core/test_core_integration.py": {
       "hash": "1bd24d4788271be90742d54c693662d61b3bed89e440c8225f9b6227f3823d99",
       "module": "auth_core",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "tests/modules/free/cache/redis/test_redis_integration.py": {
-      "hash": "ff8a54cb8577b0d5642df3885c4d8937fb8a0c20531e4684c5da1048eb5c3a3e",
+      "hash": "89fc362be3321e4344aaed345feb3c00366d49f6b8722874bd041226463e3821",
       "module": "redis",
-      "version": "0.1.15"
+      "version": "0.1.17"
     },
     "tests/modules/free/essentials/deployment/test_deployment_integration.py": {
       "hash": "85052ae353b1f6884b7d6182fe1eec3c5752d73eb1c8de2144300761b3b160c6",
@@ -703,12 +703,12 @@
     "tests/modules/integration/auth/oauth/test_oauth_integration.py": {
       "hash": "998c60a1bdc0642fd5518b2a86b05c9a500e449c4577ceaf132f6021e80b852c",
       "module": "oauth",
-      "version": "0.1.7"
+      "version": "0.1.10"
     },
     "tests/modules/integration/auth/session/test_session_integration.py": {
       "hash": "5fe1ee53f017045ac42033dcc8ce0947e88dc4079e79bf09b53da096445d11fd",
       "module": "session",
-      "version": "0.1.7"
+      "version": "0.1.8"
     },
     "tests/modules/integration/billing/cart/test_cart_integration.py": {
       "hash": "f86af9f8ee59d8e0ce5c1f8dbd580c87d095aee4623df8e910af946d519c9a2e",
@@ -728,27 +728,27 @@
     "tests/modules/integration/database/test_postgres_integration.py": {
       "hash": "393dc98ede9e3bc4c07e540640529402cdff3bc0b33c901730cc1af0efbee3d9",
       "module": "db_postgres",
-      "version": "0.1.25"
+      "version": "0.1.28"
     },
     "tests/modules/integration/security/test_cors_integration.py": {
       "hash": "f86af9f8ee59d8e0ce5c1f8dbd580c87d095aee4623df8e910af946d519c9a2e",
       "module": "cors",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "tests/modules/integration/security/test_rate_limiting_integration.py": {
       "hash": "963c46102cf5a01a4aae5d054b756bfdfca14646669e4e3625d6bc13302619cc",
       "module": "rate_limiting",
-      "version": "0.1.7"
+      "version": "0.1.9"
     },
     "tests/modules/integration/security/test_security_headers_integration.py": {
       "hash": "f86af9f8ee59d8e0ce5c1f8dbd580c87d095aee4623df8e910af946d519c9a2e",
       "module": "security_headers",
-      "version": "0.1.1"
+      "version": "0.1.3"
     },
     "tests/modules/integration/users/test_users_profiles_integration.py": {
       "hash": "87f28248516129f6d9b0cd97bcdff1c99f657b7ab727f510112a3582a4a7195e",
       "module": "users_profiles",
-      "version": "0.1.7"
+      "version": "0.1.8"
     }
   }
 }

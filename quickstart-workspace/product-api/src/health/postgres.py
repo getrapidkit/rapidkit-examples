@@ -11,7 +11,7 @@ from types import ModuleType
 from typing import Any, Optional
 
 _VENDOR_MODULE = "db_postgres"
-_VENDOR_VERSION = "0.1.25"
+_VENDOR_VERSION = "0.1.28"
 _VENDOR_RELATIVE_PATH = "src/health/postgres.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_postgres"

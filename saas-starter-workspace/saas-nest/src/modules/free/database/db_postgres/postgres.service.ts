@@ -35,7 +35,7 @@ export interface DatabasePostgresHealthPayload {
 }
 
 export const DATABASE_POSTGRES_MODULE = 'db_postgres';
-export const DATABASE_POSTGRES_VERSION = '0.1.25';
+export const DATABASE_POSTGRES_VERSION = '0.1.28';
 
 @Injectable()
 export class DatabasePostgresService

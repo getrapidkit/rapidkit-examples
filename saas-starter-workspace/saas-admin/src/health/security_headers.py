@@ -11,7 +11,7 @@ from types import ModuleType
 from typing import Any, Optional
 
 _VENDOR_MODULE = "security_headers"
-_VENDOR_VERSION = "0.1.1"
+_VENDOR_VERSION = "0.1.3"
 _VENDOR_RELATIVE_PATH = "src/health/security_headers.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_security_headers"

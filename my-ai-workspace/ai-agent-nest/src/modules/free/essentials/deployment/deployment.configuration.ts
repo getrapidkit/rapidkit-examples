@@ -14,7 +14,7 @@ type DeploymentConfig = {
 export default registerAs('deployment', (): DeploymentConfig => ({
   includeCi: true,
   includePostgres: true,
-  pythonVersion: "3.10.14",
+  pythonVersion: "3.10",
   nodeVersion: "20.19.6",
   packageManager: "npm",
   packageManagerCommand: "npm",

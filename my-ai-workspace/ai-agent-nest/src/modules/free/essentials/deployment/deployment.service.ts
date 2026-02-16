@@ -62,7 +62,7 @@ const DEFAULT_ASSETS: DeploymentAsset[] = [
 ];
 
 const VENDOR_MODULE = 'deployment';
-const VENDOR_VERSION = '0.1.3';
+const VENDOR_VERSION = '0.1.10';
 
 export const DEPLOYMENT_VENDOR_MODULE = VENDOR_MODULE;
 export const DEPLOYMENT_VENDOR_VERSION = VENDOR_VERSION;

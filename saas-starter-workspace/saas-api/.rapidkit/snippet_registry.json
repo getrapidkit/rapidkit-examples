@@ -374,8 +374,8 @@
       "version": "0.1.0",
       "priority": 10,
       "file": ".env",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:58.257934+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:28.470978+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -398,15 +398,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.257934+00:00"
+      "applied_at": "2026-02-15T18:32:58.257934+00:00",
+      "last_error": "already present in .env"
     },
     "auth_core_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 10,
       "file": ".env.dev",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:58.260786+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:28.475564+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -429,15 +430,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.260786+00:00"
+      "applied_at": "2026-02-15T18:32:58.260786+00:00",
+      "last_error": "already present in .env.dev"
     },
     "auth_core_env::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 10,
       "file": ".env.prod",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:58.264341+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:28.484541+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -460,15 +462,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.264341+00:00"
+      "applied_at": "2026-02-15T18:32:58.264341+00:00",
+      "last_error": "already present in .env.prod"
     },
     "auth_core_env::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 10,
       "file": ".env.example",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:58.267199+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:28.491420+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -491,15 +494,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.267199+00:00"
+      "applied_at": "2026-02-15T18:32:58.267199+00:00",
+      "last_error": "already present in .env.example"
     },
     "auth_core_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "0.1.0",
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:58.278159+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:28.507263+00:00",
       "template": "settings_fields.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -530,15 +534,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.278159+00:00"
+      "applied_at": "2026-02-15T18:32:58.278159+00:00",
+      "last_error": "already present in settings.py"
     },
     "auth_core_quickstart::README.md": {
       "anchor": "<!-- <<<inject:module-snippet>>> -->",
       "version": "0.1.0",
       "priority": 5,
       "file": "src/README.md",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:58.368154+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:28.513947+00:00",
       "template": "core.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -550,15 +555,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.368154+00:00"
+      "applied_at": "2026-02-15T18:32:58.368154+00:00",
+      "last_error": "already present in README.md"
     },
     "db_postgres_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "1.0.0",
       "priority": 5,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:51.333102+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:38.107077+00:00",
       "template": "settings_fields.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -581,15 +587,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.333102+00:00"
+      "applied_at": "2026-02-15T18:33:51.333102+00:00",
+      "last_error": "already present in settings.py"
     },
     "db_postgres_env_defaults::.env": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:51.336670+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:38.122098+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -610,15 +617,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.336670+00:00"
+      "applied_at": "2026-02-15T18:33:51.336670+00:00",
+      "last_error": "already present in .env"
     },
     "db_postgres_env_defaults::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env.dev",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:51.339214+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:38.131662+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -639,15 +647,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.339214+00:00"
+      "applied_at": "2026-02-15T18:33:51.339214+00:00",
+      "last_error": "already present in .env.dev"
     },
     "db_postgres_env_defaults::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env.prod",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:51.341479+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:38.141103+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -668,15 +677,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.341479+00:00"
+      "applied_at": "2026-02-15T18:33:51.341479+00:00",
+      "last_error": "already present in .env.prod"
     },
     "db_postgres_env_defaults::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env.example",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:51.343762+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:38.151468+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -697,15 +707,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.343762+00:00"
+      "applied_at": "2026-02-15T18:33:51.343762+00:00",
+      "last_error": "already present in .env.example"
     },
     "redis_env::.env": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:59.349060+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:34.903237+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -778,15 +789,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.349060+00:00"
+      "applied_at": "2026-02-15T18:33:59.349060+00:00",
+      "last_error": "already present in .env"
     },
     "redis_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env.dev",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:59.354996+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:34.919252+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -859,15 +871,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.354996+00:00"
+      "applied_at": "2026-02-15T18:33:59.354996+00:00",
+      "last_error": "already present in .env.dev"
     },
     "redis_env::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env.prod",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:59.361064+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:34.935483+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -940,15 +953,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.361064+00:00"
+      "applied_at": "2026-02-15T18:33:59.361064+00:00",
+      "last_error": "already present in .env.prod"
     },
     "redis_env::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env.example",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:59.367291+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:34.950158+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -1021,15 +1035,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.367291+00:00"
+      "applied_at": "2026-02-15T18:33:59.367291+00:00",
+      "last_error": "already present in .env.example"
     },
     "redis_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "1.0.0",
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:59.379777+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:34.969887+00:00",
       "template": "redis_fields.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -1056,15 +1071,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.379777+00:00"
+      "applied_at": "2026-02-15T18:33:59.379777+00:00",
+      "last_error": "already present in settings.py"
     },
     "redis_quickstart::README.md": {
       "anchor": "<!-- <<<inject:module-snippet>>> -->",
       "version": "1.0.0",
       "priority": 5,
       "file": "src/README.md",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:33:59.425402+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:34.982363+00:00",
       "template": "redis.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -1075,15 +1091,16 @@
         "additionalProperties": true,
         "required": []
       },
-      "applied_at": "2026-02-15T18:33:59.425402+00:00"
+      "applied_at": "2026-02-15T18:33:59.425402+00:00",
+      "last_error": "already present in README.md"
     },
     "users_core_env::.env": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:34:15.839174+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:48.297134+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1109,15 +1126,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.839174+00:00"
+      "applied_at": "2026-02-15T18:34:15.839174+00:00",
+      "last_error": "already present in .env"
     },
     "users_core_env::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env.example",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:34:15.848460+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:48.313995+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1143,15 +1161,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.848460+00:00"
+      "applied_at": "2026-02-15T18:34:15.848460+00:00",
+      "last_error": "already present in .env.example"
     },
     "users_core_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env.dev",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:34:15.861058+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:48.328871+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1177,15 +1196,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.861058+00:00"
+      "applied_at": "2026-02-15T18:34:15.861058+00:00",
+      "last_error": "already present in .env.dev"
     },
     "users_core_env::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env.prod",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:34:15.869391+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:48.341753+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1211,15 +1231,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.869391+00:00"
+      "applied_at": "2026-02-15T18:34:15.869391+00:00",
+      "last_error": "already present in .env.prod"
     },
     "users_core_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "0.1.0",
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:34:15.881067+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:48.357597+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1235,15 +1256,16 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.881067+00:00"
+      "applied_at": "2026-02-15T18:34:15.881067+00:00",
+      "last_error": "already present in settings.py"
     },
     "security_headers_quickstart::README.md": {
       "anchor": "<!-- <<<inject:module-snippet>>> -->",
       "version": "1.0.0",
       "priority": 10,
       "file": "src/README.md",
-      "status": "applied",
-      "last_attempt_at": "2026-02-15T18:35:18.449953+00:00",
+      "status": "failed",
+      "last_attempt_at": "2026-02-16T12:10:43.436751+00:00",
       "template": "security_headers.snippet.j2",
       "module_slug": "free/security/security_headers",
       "profile": "fastapi/ddd",
@@ -1263,7 +1285,588 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:35:18.449953+00:00"
+      "applied_at": "2026-02-15T18:35:18.449953+00:00",
+      "last_error": "already present in README.md"
+    },
+    "oauth_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:31.051041+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "google": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "openid",
+                "email",
+                "profile"
+              ]
+            },
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:31.051041+00:00"
+    },
+    "oauth_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:31.066168+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "google": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "openid",
+                "email",
+                "profile"
+              ]
+            },
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:31.066168+00:00"
+    },
+    "oauth_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:31.082566+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "google": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "openid",
+                "email",
+                "profile"
+              ]
+            },
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:31.082566+00:00"
+    },
+    "oauth_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:31.098394+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/oauth",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "oauth_defaults": {
+          "redirect_base_url": "https://example.com/auth/oauth",
+          "state_ttl_seconds": 900,
+          "state_cleanup_interval": 300,
+          "providers": {
+            "google": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "openid",
+                "email",
+                "profile"
+              ]
+            },
+            "github": {
+              "client_id": "",
+              "client_secret": "",
+              "scopes": [
+                "user:email"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "OAUTH_REDIRECT_BASE_URL": {
+            "type": "str",
+            "default": "https://example.com/auth/oauth",
+            "description": "Base URL used for OAuth redirect callbacks"
+          },
+          "OAUTH_STATE_TTL_SECONDS": {
+            "type": "int",
+            "default": 900,
+            "description": "Lifetime (seconds) for stored OAuth state tokens"
+          },
+          "OAUTH_STATE_CLEANUP_INTERVAL": {
+            "type": "int",
+            "default": 300,
+            "description": "Cleanup cadence (seconds) for purging expired OAuth state"
+          },
+          "OAUTH_PROVIDERS": {
+            "type": "string",
+            "default": "{\"github\": {\"scopes\": [\"user:email\"]}}",
+            "description": "JSON map of configured OAuth providers and their settings"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:31.098394+00:00"
+    },
+    "session_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:32.924383+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/session",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "session_defaults": {
+          "secret_key_env": "RAPIDKIT_SESSION_SECRET",
+          "session_ttl_seconds": 2592000,
+          "refresh_ttl_seconds": 15552000,
+          "cookie_name": "rapidkit_session",
+          "cookie_domain": "",
+          "cookie_secure": true,
+          "cookie_httponly": true,
+          "cookie_same_site": "lax",
+          "storage_backend": "memory"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_SESSION_SECRET": {
+            "type": "str",
+            "default": "",
+            "description": "Signing secret for session tokens"
+          },
+          "SESSION_TTL_SECONDS": {
+            "type": "int",
+            "default": 2592000,
+            "description": "Primary session lifetime in seconds"
+          },
+          "SESSION_REFRESH_TTL_SECONDS": {
+            "type": "int",
+            "default": 15552000,
+            "description": "Refresh token lifetime in seconds"
+          },
+          "SESSION_COOKIE_NAME": {
+            "type": "str",
+            "default": "rapidkit_session",
+            "description": "Name of the session cookie"
+          },
+          "SESSION_COOKIE_DOMAIN": {
+            "type": "str",
+            "default": "",
+            "description": "Optional domain attribute for the session cookie"
+          },
+          "SESSION_COOKIE_SECURE": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as secure"
+          },
+          "SESSION_COOKIE_HTTPONLY": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as HTTPOnly"
+          },
+          "SESSION_COOKIE_SAME_SITE": {
+            "type": "str",
+            "default": "lax",
+            "description": "SameSite policy for the session cookie"
+          },
+          "SESSION_STORAGE_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "description": "Storage backend identifier for sessions"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:32.924383+00:00"
+    },
+    "session_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:32.940518+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/session",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "session_defaults": {
+          "secret_key_env": "RAPIDKIT_SESSION_SECRET",
+          "session_ttl_seconds": 2592000,
+          "refresh_ttl_seconds": 15552000,
+          "cookie_name": "rapidkit_session",
+          "cookie_domain": "",
+          "cookie_secure": true,
+          "cookie_httponly": true,
+          "cookie_same_site": "lax",
+          "storage_backend": "memory"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_SESSION_SECRET": {
+            "type": "str",
+            "default": "",
+            "description": "Signing secret for session tokens"
+          },
+          "SESSION_TTL_SECONDS": {
+            "type": "int",
+            "default": 2592000,
+            "description": "Primary session lifetime in seconds"
+          },
+          "SESSION_REFRESH_TTL_SECONDS": {
+            "type": "int",
+            "default": 15552000,
+            "description": "Refresh token lifetime in seconds"
+          },
+          "SESSION_COOKIE_NAME": {
+            "type": "str",
+            "default": "rapidkit_session",
+            "description": "Name of the session cookie"
+          },
+          "SESSION_COOKIE_DOMAIN": {
+            "type": "str",
+            "default": "",
+            "description": "Optional domain attribute for the session cookie"
+          },
+          "SESSION_COOKIE_SECURE": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as secure"
+          },
+          "SESSION_COOKIE_HTTPONLY": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as HTTPOnly"
+          },
+          "SESSION_COOKIE_SAME_SITE": {
+            "type": "str",
+            "default": "lax",
+            "description": "SameSite policy for the session cookie"
+          },
+          "SESSION_STORAGE_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "description": "Storage backend identifier for sessions"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:32.940518+00:00"
+    },
+    "session_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:32.958282+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/session",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "session_defaults": {
+          "secret_key_env": "RAPIDKIT_SESSION_SECRET",
+          "session_ttl_seconds": 2592000,
+          "refresh_ttl_seconds": 15552000,
+          "cookie_name": "rapidkit_session",
+          "cookie_domain": "",
+          "cookie_secure": true,
+          "cookie_httponly": true,
+          "cookie_same_site": "lax",
+          "storage_backend": "memory"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_SESSION_SECRET": {
+            "type": "str",
+            "default": "",
+            "description": "Signing secret for session tokens"
+          },
+          "SESSION_TTL_SECONDS": {
+            "type": "int",
+            "default": 2592000,
+            "description": "Primary session lifetime in seconds"
+          },
+          "SESSION_REFRESH_TTL_SECONDS": {
+            "type": "int",
+            "default": 15552000,
+            "description": "Refresh token lifetime in seconds"
+          },
+          "SESSION_COOKIE_NAME": {
+            "type": "str",
+            "default": "rapidkit_session",
+            "description": "Name of the session cookie"
+          },
+          "SESSION_COOKIE_DOMAIN": {
+            "type": "str",
+            "default": "",
+            "description": "Optional domain attribute for the session cookie"
+          },
+          "SESSION_COOKIE_SECURE": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as secure"
+          },
+          "SESSION_COOKIE_HTTPONLY": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as HTTPOnly"
+          },
+          "SESSION_COOKIE_SAME_SITE": {
+            "type": "str",
+            "default": "lax",
+            "description": "SameSite policy for the session cookie"
+          },
+          "SESSION_STORAGE_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "description": "Storage backend identifier for sessions"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:32.958282+00:00"
+    },
+    "session_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "0.1.0",
+      "priority": 10,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-02-16T12:10:32.973799+00:00",
+      "template": "env.snippet.j2",
+      "module_slug": "free/auth/session",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "session_defaults": {
+          "secret_key_env": "RAPIDKIT_SESSION_SECRET",
+          "session_ttl_seconds": 2592000,
+          "refresh_ttl_seconds": 15552000,
+          "cookie_name": "rapidkit_session",
+          "cookie_domain": "",
+          "cookie_secure": true,
+          "cookie_httponly": true,
+          "cookie_same_site": "lax",
+          "storage_backend": "memory"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RAPIDKIT_SESSION_SECRET": {
+            "type": "str",
+            "default": "",
+            "description": "Signing secret for session tokens"
+          },
+          "SESSION_TTL_SECONDS": {
+            "type": "int",
+            "default": 2592000,
+            "description": "Primary session lifetime in seconds"
+          },
+          "SESSION_REFRESH_TTL_SECONDS": {
+            "type": "int",
+            "default": 15552000,
+            "description": "Refresh token lifetime in seconds"
+          },
+          "SESSION_COOKIE_NAME": {
+            "type": "str",
+            "default": "rapidkit_session",
+            "description": "Name of the session cookie"
+          },
+          "SESSION_COOKIE_DOMAIN": {
+            "type": "str",
+            "default": "",
+            "description": "Optional domain attribute for the session cookie"
+          },
+          "SESSION_COOKIE_SECURE": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as secure"
+          },
+          "SESSION_COOKIE_HTTPONLY": {
+            "type": "bool",
+            "default": true,
+            "description": "Mark session cookie as HTTPOnly"
+          },
+          "SESSION_COOKIE_SAME_SITE": {
+            "type": "str",
+            "default": "lax",
+            "description": "SameSite policy for the session cookie"
+          },
+          "SESSION_STORAGE_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "description": "Storage backend identifier for sessions"
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-02-16T12:10:32.973799+00:00"
     }
   }
 }
