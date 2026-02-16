@@ -8,6 +8,8 @@ This repository contains production-style reference implementations that accompa
 
 ## 🚀 Featured Examples
 
+> 💡 **Quick Tip:** Install the [RapidKit VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode) to clone, run, and manage these workspaces with one click. See the [VS Code Extension section](#-vs-code-extension-recommended) below for details.
+
 ### 1. Quickstart Workspace (⚡ Beginner)
 
 **Path:** [quickstart-workspace](quickstart-workspace)
@@ -72,7 +74,188 @@ This repository contains production-style reference implementations that accompa
 
 ---
 
-## ⚡ Quick Start
+## 💡 VS Code Extension (Recommended)
+
+**The fastest way to work with RapidKit workspaces.**
+
+### 🎯 Why Use the Extension?
+
+Skip manual cloning and setup. The [RapidKit VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode) provides a complete integrated development experience for RapidKit projects.
+
+### ✨ Key Features
+
+**1. One-Click Workspace Import**
+- **Clone from GitHub** — Paste any RapidKit workspace URL, clone instantly
+- **Import Downloaded Workspaces** — Drag & drop `.zip` files or browse local folders
+- **Welcome Page** — Visual gallery of all available example workspaces
+
+**2. Integrated Project Management**
+- **Run/Stop Services** — Start development servers from the sidebar
+- **View Logs** — Real-time log streaming in integrated terminal
+- **Health Checks** — Monitor module status with visual indicators
+- **Port Management** — Auto-detect and resolve port conflicts
+
+**3. Module Management**
+- **Install Modules** — GUI wizard for adding modules (auth, database, AI, etc.)
+- **Configure Settings** — Visual editors for module configurations
+- **Module Status** — See which modules are installed and their health
+
+**4. Development Tools**
+- **RapidKit Terminal** — Integrated terminal with command autocomplete
+- **Quick Actions** — Run migrations, tests, or custom scripts with one click
+- **Project Templates** — Scaffolding wizards for new projects
+- **Multi-Project Workspaces** — Manage multiple services simultaneously
+
+**5. Testing & Debugging**
+- **Run Tests** — Execute test suites from the sidebar
+- **Debug Configuration** — Pre-configured debug profiles
+- **Coverage Reports** — View test coverage inline
+
+### 📦 Installation
+
+**Option 1: From VS Code**
+1. Open VS Code
+2. Go to Extensions (`Cmd/Ctrl+Shift+X`)
+3. Search for "RapidKit"
+4. Click **Install**
+
+**Option 2: Command Line**
+```bash
+code --install-extension rapidkit.rapidkit-vscode
+```
+
+**Option 3: Direct Download**
+- Visit: https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode
+- Click "Install"
+
+### 🚀 Quick Start with Extension
+
+**Import This Repository:**
+
+1. Open VS Code
+2. Open Command Palette (`Cmd/Ctrl+Shift+P`)
+3. Type: **RapidKit: Import Workspace**
+4. Paste: `https://github.com/getrapidkit/rapidkit-examples.git`
+5. Select workspace (quickstart-workspace, my-ai-workspace, or saas-starter-workspace)
+6. Click **Import & Setup**
+
+**That's it!** The extension will:
+- Clone the repository
+- Install dependencies
+- Configure environment
+- Open the workspace
+- Show available services in the sidebar
+
+**Run a Project:**
+
+1. Open RapidKit sidebar (left panel)
+2. Expand "Projects"
+3. Click ▶️ next to any project (e.g., `product-api`)
+4. Extension starts the dev server automatically
+5. Click 🌐 to open in browser
+
+### 🎬 Example Workflow
+
+**Scenario: Run the SaaS Starter Workspace**
+
+```
+Command Palette → RapidKit: Import Workspace
+→ Paste: https://github.com/getrapidkit/rapidkit-examples.git
+→ Select: saas-starter-workspace
+→ Click: Import & Setup
+```
+
+**After import:**
+- Sidebar shows 4 projects: `saas-api`, `saas-admin`, `saas-nest`, `saas-webhooks`
+- Click ▶️ on `saas-api` → Dev server starts on port 8000
+- Click ▶️ on `saas-admin` → Starts on port 8001
+- Click 🌐 → Opens Swagger docs automatically
+- Click 📊 → View logs in integrated terminal
+
+**Need to add a module?**
+- Right-click project → **Install Module**
+- Select module (e.g., `stripe_payment`)
+- Extension installs and configures automatically
+- Service restarts with new module
+
+### 📱 Extension UI Overview
+
+**Sidebar Panels:**
+- **📦 Workspaces** — All imported workspaces
+- **🎯 Projects** — Services within active workspace
+- **🧩 Modules** — Installed modules with status indicators
+- **⚙️ Settings** — Quick access to configurations
+- **📝 Logs** — Real-time log viewer
+
+**Status Bar:**
+- **RapidKit CLI Version** — Click to check for updates
+- **Active Workspace** — Current workspace name
+- **Running Services** — Count of active dev servers
+
+### 🔧 Advanced Features
+
+**1. Workspace Health Check:**
+- Right-click workspace → **Run Health Check**
+- Extension validates Python, Poetry, dependencies, modules
+- Shows actionable fixes for any issues
+
+**2. Module Configuration:**
+- Click any module in sidebar
+- Visual editor for `config/{module}.toml` files
+- Autocomplete for configuration options
+
+**3. Custom Scripts:**
+- Define scripts in `pyproject.toml`:
+  ```toml
+  [tool.rapidkit.scripts]
+  seed-db = "python scripts/seed_database.py"
+  migrate = "alembic upgrade head"
+  ```
+- Run from Command Palette: **RapidKit: Run Script**
+
+**4. Multi-Workspace Support:**
+- Open multiple RapidKit workspaces side-by-side
+- Switch between workspaces in dropdown
+- Each workspace has independent service states
+
+### 🆚 Extension vs Manual Setup
+
+| Task | Manual | With Extension |
+|------|--------|----------------|
+| Clone workspace | 4 commands | 1 click |
+| Install dependencies | 3 commands per project | Automatic |
+| Start dev server | Terminal, type commands | Click ▶️ |
+| Check logs | Switch terminals | Integrated viewer |
+| Install module | CLI + config edits | GUI wizard |
+| Health check | `npx rapidkit doctor` | Right-click menu |
+| Port conflicts | Manual debugging | Auto-resolves |
+
+**Time saved per project: ~5-10 minutes**
+
+### 🐛 Troubleshooting
+
+**Extension not showing workspaces?**
+- Reload window: `Cmd/Ctrl+Shift+P` → **Reload Window**
+- Check output panel: **View → Output → RapidKit**
+
+**Project won't start?**
+- Right-click → **Run Health Check**
+- Install missing dependencies: Right-click → **Install Dependencies**
+
+**Module installation fails?**
+- Check logs in Output panel
+- Ensure virtual environment is activated
+- Try: Right-click project → **Rebuild Environment**
+
+### 📚 Learn More
+
+- **Extension Docs:** https://docs.getrapidkit.com/vscode
+- **Video Tutorial:** https://www.youtube.com/@rapidkit
+- **Report Issues:** https://github.com/rapidkit/vscode-extension/issues
+
+---
+
+## ⚡ Quick Start (Manual Setup)
 
 ### Quickstart Workspace (Beginner - 5 minutes)
 
@@ -256,7 +439,7 @@ rapidkit-examples/
 **RapidKit Resources:**
 - 📦 **npm CLI:** https://www.npmjs.com/package/rapidkit
 - 🐍 **Python Core:** https://pypi.org/project/rapidkit-core/
-- 🧩 **VS Code Extension:** https://marketplace.visualstudio.com/rapidkit
+- 🧩 **VS Code Extension:** https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode
 - 🌐 **Website:** https://www.getrapidkit.com
 - 📖 **Documentation:** https://docs.getrapidkit.com
 
