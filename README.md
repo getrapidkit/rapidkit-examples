@@ -69,8 +69,8 @@ This repository contains production-style reference implementations that accompa
 **Modules:** `settings`, `logging`, `db_postgres`, `redis`, `auth_core`, `oauth`, `session`, `users_core`, `users_profiles`, `stripe_payment`, `cart`, `inventory`, `security_headers`, `rate_limiting`, `celery`, `email`, `notifications`
 
 **Articles:**
-- Medium: Draft available in `Front/Docs/Articles/Medium.com/13.md`
-- Dev.to: Draft available in `Front/Docs/Articles/Dev.To/13.md`
+- Medium: [Building Production SaaS Architecture: Deep Dive into Multi-Service Implementation](https://rapidkit.medium.com/building-production-saas-architecture-deep-dive-into-multi-service-implementation-8a838f36e4ad)
+- Dev.to: [Build Production SaaS: Code Walkthrough (FastAPI + NestJS + Webhooks)](https://dev.to/rapidkit/build-production-saas-code-walkthrough-4c7c)
 
 ---
 
