@@ -3,8 +3,8 @@
 Production-ready multi-service SaaS architecture with FastAPI, NestJS, and advanced webhook processing.
 
 **Related Articles:**
-- Medium: [Building Production SaaS Architecture: Deep Dive into Multi-Service Implementation](https://medium.com/@rapidkit/building-production-saas-architecture-13)
-- Dev.to: [Build Production SaaS: Code Walkthrough (FastAPI + NestJS + Webhooks)](https://dev.to/rapidkit/build-production-saas-code-walkthrough-13)
+- Medium: [Building Production SaaS Architecture: Deep Dive into Multi-Service Implementation](https://rapidkit.medium.com/building-production-saas-architecture-deep-dive-into-multi-service-implementation-8a838f36e4ad)
+- Dev.to: [Build Production SaaS: Code Walkthrough (FastAPI + NestJS + Webhooks)](https://dev.to/rapidkit/build-production-saas-code-walkthrough-4c7c)
 - Source repository: https://github.com/getrapidkit/rapidkit-examples/tree/main/saas-starter-workspace
 
 **Projects in this workspace:**
