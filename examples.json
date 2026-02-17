@@ -19,7 +19,7 @@
             ],
             "featured": true,
             "difficulty": "intermediate",
-            "lastModified": "2026-02-14T00:00:00Z",
+            "lastModified": "2026-02-17T00:00:00Z",
             "tutorialLinks": [
                 {
                     "title": "Build Your First AI Agent with RapidKit",
@@ -163,6 +163,34 @@
                         "GET /auth/me"
                     ],
                     "defaultPort": 8000
+                },
+                {
+                    "id": "ecommerce-api",
+                    "name": "ecommerce-api",
+                    "type": "fastapi",
+                    "displayName": "E-Commerce API",
+                    "description": "Production-style ecommerce API with catalog, cart, checkout, auth-ready modules, PostgreSQL, Redis, and security defaults.",
+                    "path": "quickstart-workspace/ecommerce-api",
+                    "features": [
+                        "Catalog management endpoints",
+                        "Cart and checkout flow",
+                        "PostgreSQL module wiring",
+                        "Redis module wiring",
+                        "Auth Core + Security Headers",
+                        "Structured logging and module health"
+                    ],
+                    "endpoints": [
+                        "GET /docs",
+                        "GET /health",
+                        "GET /api/v1/ecommerce/products",
+                        "POST /api/v1/ecommerce/products",
+                        "POST /api/v1/ecommerce/cart/items",
+                        "POST /api/v1/ecommerce/checkout",
+                        "GET /api/v1/ecommerce/orders/{order_id}",
+                        "GET /api/health/module/postgres",
+                        "GET /api/health/module/redis"
+                    ],
+                    "defaultPort": 8001
                 }
             ],
             "requirements": {

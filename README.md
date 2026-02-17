@@ -28,8 +28,8 @@ This repository contains production-style reference implementations that accompa
 **Modules:** `settings`, `auth_core`, `db_postgres`, `redis`, `cors`, `security_headers`, `logging`, `deployment`
 
 **Articles:**
-- Medium: [From Zero to Production API in 5 Minutes](https://medium.com/@rapidkit/from-zero-to-production-api-in-5-minutes-e2f058286a09)
-- Dev.to: [From Zero to Production API in 5 Minutes](https://dev.to/rapidkit/from-zero-to-production-api-in-5-minutes-2ehl)
+- Medium: [From Zero to Production FastAPI with RapidKit: Build a Real E-Commerce API](https://medium.com/@rapidkit/from-zero-to-production-fastapi-with-rapidkit-build-a-real-e-commerce-api-80390a34ffe3)
+- Dev.to: [Build a Production-Ready FastAPI E-Commerce API with RapidKit (Step-by-Step)](https://dev.to/rapidkit/build-a-production-ready-fastapi-e-commerce-api-with-rapidkit-step-by-step-llm)
 
 ---
 

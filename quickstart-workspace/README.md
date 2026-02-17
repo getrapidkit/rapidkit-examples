@@ -3,12 +3,13 @@
 RapidKit workspace demonstrating production-ready API development in 5 minutes.
 
 **Related Articles:**
-- Medium: [From Zero to Production API in 5 Minutes](https://medium.com/@rapidkit/from-zero-to-production-api-in-5-minutes-e2f058286a09)
-- Dev.to: [From Zero to Production API in 5 Minutes](https://dev.to/rapidkit/from-zero-to-production-api-in-5-minutes-2ehl)
+- Medium: [From Zero to Production FastAPI with RapidKit: Build a Real E-Commerce API](https://medium.com/@rapidkit/from-zero-to-production-fastapi-with-rapidkit-build-a-real-e-commerce-api-80390a34ffe3)
+- Dev.to: [Build a Production-Ready FastAPI E-Commerce API with RapidKit (Step-by-Step)](https://dev.to/rapidkit/build-a-production-ready-fastapi-e-commerce-api-with-rapidkit-step-by-step-llm)
 - Source repository: https://github.com/getrapidkit/rapidkit-examples/tree/main/quickstart-workspace
 
 **Projects in this workspace:**
 - [product-api](product-api/README.md) - Production-ready FastAPI with auth, database, caching, and monitoring
+- [ecommerce-api](ecommerce-api/README.md) - Production-style e-commerce backend with catalog/cart/checkout flow
 
 ---
 
@@ -30,7 +31,7 @@ cd quickstart-workspace
 
 ```bash
 # From workspace root
-cd product-api
+cd ecommerce-api
 docker-compose up -d postgres redis
 ```
 
@@ -41,7 +42,7 @@ docker-compose up -d postgres redis
 ### 3. Run the API
 
 ```bash
-cd product-api
+cd ecommerce-api
 source .rapidkit/activate
 rapidkit init
 rapidkit dev
@@ -81,6 +82,26 @@ Production-ready FastAPI with:
 - `logging` - Structured logging
 - `deployment` - Production configs
 
+### ecommerce-api
+
+Production-style FastAPI commerce backend with:
+- ✅ Product catalog endpoints
+- ✅ Cart and checkout workflow
+- ✅ PostgreSQL + Redis modules installed
+- ✅ Auth core and security headers
+- ✅ Health endpoints + structured logging
+- ✅ Docker + tests + Ruff
+
+**Modules installed:**
+- `settings`
+- `logging`
+- `deployment`
+- `middleware`
+- `db_postgres`
+- `auth_core`
+- `redis`
+- `security_headers`
+
 ---
 
 ## 📁 Workspace Structure
@@ -91,7 +112,8 @@ quickstart-workspace/
 ├── pyproject.toml         # Workspace dependencies
 ├── poetry.toml           # Poetry config
 ├── .venv/                # Shared virtual environment
-└── product-api/          # FastAPI project
+├── product-api/          # FastAPI quickstart demo
+└── ecommerce-api/        # FastAPI commerce demo
     ├── src/
     │   ├── main.py       # FastAPI app
     │   ├── routing/      # API routes
@@ -270,7 +292,7 @@ curl http://localhost:8000/metrics
 
 ## 💡 Next Steps
 
-1. **Explore the code** - Check [product-api/README.md](product-api/README.md)
+1. **Explore the code** - Check [product-api/README.md](product-api/README.md) and [ecommerce-api/README.md](ecommerce-api/README.md)
 2. **Add features** - Install more modules as needed
 3. **Customize** - Modify generated code for your use case
 4. **Deploy** - Use provided Docker configs
